@@ -1,0 +1,28 @@
+
+
+
+div {
+  height: 300px;
+  margin: 0;
+}
+
+.btn-outline-dark {
+    border-color: #979797;
+    border-width: 1.5px;
+    border-radius: 5px;
+  }
+
+#iperbot {
+   background-color: coral;
+}
+#flashcard {
+    background-color: aliceblue;
+ }
+
+#iperbot:hover {
+   background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+}
+
+#flashcard:hover {
+    background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+ }
