@@ -1,4 +1,14 @@
 
+html, body {
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+}
+
+body {
+   -webkit-overflow-scrolling: touch;
+}
+
 #sidebar {
    width: 170px;
    position: fixed;
@@ -9,6 +19,7 @@
    color: black;
    border-right: 1px solid black;
    text-decoration: none;
+ 
 }
 
 h4 {
