@@ -1,29 +1,31 @@
 
 #sidebar {
-   width: 150px;
+   width: 170px;
    position: fixed;
    top: 0;
    left: 0;
    height: 100vh;
-   background: lightgray;
-   color: #fff;
+   background: white;
+   color: black;
+   border-right: 1px solid black;
+   text-decoration: none;
 }
 
-#content {
-   width: 100% - 150px;
-   border: 1px solid gold;
+h4 {
+   padding: 16px 16px 16px 16px;
 }
 
 .flex-grid {
    display: flex;
-   width: calc(100% - 150px);
+   width: calc(100% - 170px);
    float: right;
+   height: 60vh;
  }
  .col {
    flex: 1;
  }
 
- @media (max-width: 400px) {
+ @media (max-width: 600px) {
    .flex-grid {
      display: block;
      width: 100vw;
@@ -34,11 +36,23 @@
       width: 100vw;
       height: auto;
       text-align: center;
-      background: lightgray;
-      color: #fff;
    }
 
  }
+
+nav a {
+  color: black;     
+}
+
+nav a:active {
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+nav a:hover {
+   border-left: 7px solid black;
+   color: black;
+}
 
 
 
