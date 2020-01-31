@@ -1,16 +1,47 @@
 
-
-
-div {
-  height: 300px;
-  margin: 0;
+#sidebar {
+   width: 150px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   background: lightgray;
+   color: #fff;
 }
 
-.btn-outline-dark {
-    border-color: #979797;
-    border-width: 1.5px;
-    border-radius: 5px;
-  }
+#content {
+   width: 100% - 150px;
+   border: 1px solid gold;
+}
+
+.flex-grid {
+   display: flex;
+   width: calc(100% - 150px);
+   float: right;
+ }
+ .col {
+   flex: 1;
+ }
+
+ @media (max-width: 400px) {
+   .flex-grid {
+     display: block;
+     width: 100vw;
+   }
+
+   #sidebar {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      text-align: center;
+      background: lightgray;
+      color: #fff;
+   }
+
+ }
+
+
+
 
 #iperbot {
    background-color: coral;
@@ -21,7 +52,7 @@ div {
 
 #iperbot:hover {
    background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-}
+} */
 
 #flashcard:hover {
     background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
