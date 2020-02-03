@@ -19,7 +19,6 @@ body {
    color: black;
    border-right: 1px solid black;
    text-decoration: none;
- 
 }
 
 h4 {
@@ -72,13 +71,36 @@ nav a:hover {
    background-color: coral;
 }
 #flashcard {
-    background-color: aliceblue;
+   background-color: white;
  }
 
 #iperbot:hover {
    background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
-} */
+}
 
 #flashcard:hover {
-    background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+  background-image: url(images/flashcards.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#flashcard:hover button {
+   animation-name: animateLinks;
+   animation-duration: 2s;
  }
+
+
+
+@keyframes animateCard {
+
+}
+
+@keyframes animateLinks {
+  0%{
+    transform: scale(0.1, 0.1);
+  }
+  
+  100%{
+   transform: scale(1, 1);
+  }
+}
