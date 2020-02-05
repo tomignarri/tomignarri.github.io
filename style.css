@@ -44,7 +44,7 @@ h6 {
    flex: 1;
  }
 
- @media (max-width: 600px) {
+@media (max-width: 600px) {
    .flex-grid {
      display: block;
      width: 100vw;
@@ -56,8 +56,7 @@ h6 {
       height: auto;
       text-align: center;
    }
-
- }
+}
 
 nav a {
   color: black;     
@@ -76,7 +75,7 @@ nav a:hover {
 .dot {
    height: 12px;
    width: 12px;
-   background-color: red;
+   background-color: yellow;
    border-radius: 50%;
    display: inline-block;
    opacity: 80%;
@@ -92,17 +91,20 @@ nav a:hover {
 
 .projectCard span {
    transition: all 0.5s ease;
+   filter: blur(0);
+   -webkit-filter: blur(0);
 }
 
 .projectCard button {
    transform: scale(0.0);
    transition: all 0.5s ease;
+   transform-origin: left top;
 }
 .projectCard p {
    font-weight: 300;
    font-size: 15px;
    transform: scale(0.0);
-   transform-origin: left;
+   transform-origin: left top;
    transition: all 0.5s ease;
 }
 
@@ -115,13 +117,53 @@ nav a:hover {
  } 
 
  .projectCard:hover span {
-   transform: scale(80);
+   transform: scale(90);
   
  }
 
 /* Individual card backgrounds. */
 #flashcard {
-   background-image: url(images/flashcards.jpg);
+  background-image: url(images/flashcard.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#iperbot {
+  background-image: url(images/iperbot.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+#iperbot .dot {
+   background-color: white;
+}
+
+#valveVisaid {
+  background-image: url(images/valveVisaid.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+#valveVisaid .dot {
+  background-color: orange;
+}  
+
+#govtBodies {
+  background-image: url(images/govtBodies.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
+
+#govtBodies .dot {
+   background-color: lightblue;
+} 
+
+#makeanote {
+   background-image: url(images/makeanote.jpg);
    background-repeat: no-repeat;
    background-size: cover;
- }
+ } 
+ 
+ #makeanote .dot {
+    background-color: red;
+ } 
