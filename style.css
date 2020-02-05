@@ -1,8 +1,9 @@
 
 html, body {
-   height: 100%;
-   width: 100%;
-   overflow: auto;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+
 }
 
 body {
@@ -22,10 +23,30 @@ body {
    color: black;
    border-right: 1px solid black;
    text-decoration: none;
+   font-weight: 300;
 }
 
-h4 {
-   padding: 16px 16px 16px 16px;
+.contact {
+  height: 0px;
+  width: calc(100% - 170px);
+  float: right;
+  background-color: whitesmoke;
+}
+
+.contactStart {
+  -webkit-transition: all 1s ease;  
+  -moz-transition: all 1s ease;  
+  -o-transition: all 1s ease;  
+  -ms-transition: all 1s ease;  
+  transition: all 1s ease;
+}
+
+.contactEnd {
+  height: 30vh;
+}
+
+.contactContent {
+   font-weight: 300;
 }
 
 h6 {
@@ -44,31 +65,13 @@ h6 {
    flex: 1;
  }
 
-@media (max-width: 600px) {
-   .flex-grid {
-     display: block;
-     width: 100vw;
-   }
-
-   #sidebar {
-      position: relative;
-      width: 100vw;
-      height: auto;
-      text-align: center;
-   }
-}
-
 nav a {
   color: black;     
 }
 
-nav a:active {
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-}
-
 nav a:hover {
-   border-left: 7px solid black;
+   border-top: 1px solid black;
+   border-bottom: 1px solid black;
    color: black;
 }
 
@@ -80,13 +83,15 @@ nav a:hover {
    display: inline-block;
    opacity: 80%;
    position: relative;
+
+   /* Remove blur on animations */
    filter: blur(0);
    -webkit-filter: blur(0);
 }
 
 .projectCard {
-   animation-name: animateCardOff;
    overflow: hidden;
+   padding: 20px 20px 20px 20px;
 } 
 
 .projectCard span {
@@ -100,6 +105,7 @@ nav a:hover {
    transition: all 0.5s ease;
    transform-origin: left top;
 }
+
 .projectCard p {
    font-weight: 300;
    font-size: 15px;
@@ -118,7 +124,6 @@ nav a:hover {
 
  .projectCard:hover span {
    transform: scale(90);
-  
  }
 
 /* Individual card backgrounds. */
@@ -135,7 +140,7 @@ nav a:hover {
 } 
 
 #iperbot .dot {
-   background-color: white;
+  background-color: white;
 }
 
 #valveVisaid {
@@ -155,15 +160,123 @@ nav a:hover {
 } 
 
 #govtBodies .dot {
-   background-color: lightblue;
+  background-color: lightblue;
 } 
 
 #makeanote {
-   background-image: url(images/makeanote.jpg);
-   background-repeat: no-repeat;
-   background-size: cover;
- } 
+  background-image: url(images/makeanote.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+} 
  
  #makeanote .dot {
     background-color: red;
  } 
+
+/* 800 pixel device width */
+@media (max-width: 800px) {
+   .flex-grid {
+      display: block;
+      height: auto;
+    }
+
+   .projectCard {
+      overflow: hidden;
+      padding: 10px 10px 60px 10px;
+   } 
+    
+    .projectCard button {
+      transform: scale(1);
+      transition: all 0.5s ease;
+      transform-origin: left top;
+   }
+   
+   .projectCard p {
+      font-weight: 300;
+      font-size: 15px;
+      transform: scale(1);
+      transform-origin: left top;
+      transition: all 0.5s ease;
+   }
+   
+   .dot {
+      height: 12px;
+      width: 12px;
+      background-color: yellow;
+      border-radius: 50%;
+      display: inline-block;
+      opacity: 80%;
+      position: relative;
+   
+      /* Remove blur on animations */
+      filter: blur(0);
+      -webkit-filter: blur(0);
+   }
+
+   .projectCard span {
+      transform: scale(90);
+    }
+      
+
+}  
+
+/* mobile width */
+@media (max-width: 600px) {
+   .flex-grid {
+     display: block;
+     width: 100vw;
+     height: auto;
+   }
+
+   #sidebar {
+      position: relative;
+      width: 100vw;
+      height: auto;
+      text-align: center;
+      border-right: 0px;
+      border-bottom: 1px solid black;
+   }
+   .contact {
+      width: 100vh;
+      text-align: center;
+   }
+
+   .projectCard {
+      overflow: hidden;
+      padding: 20px 10px 40px 10px;
+   } 
+
+    .projectCard button {
+      transform: scale(1);
+      transition: all 0.5s ease;
+      transform-origin: left top;
+   }
+   
+   .projectCard p {
+      font-weight: 300;
+      font-size: 15px;
+      transform: scale(1);
+      transform-origin: left top;
+      transition: all 0.5s ease;
+   }
+   
+   .dot {
+      height: 12px;
+      width: 12px;
+      background-color: yellow;
+      border-radius: 0;
+      display: inline-block;
+      opacity: 70%;
+      position: relative;
+   
+      /* Remove blur on animations */
+      filter: blur(0);
+      -webkit-filter: blur(0);
+   }
+
+   .projectCard span {
+      transform: scale(90);
+    }
+   
+
+} 
