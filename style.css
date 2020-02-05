@@ -6,7 +6,10 @@ html, body {
 }
 
 body {
+   /* Override to allow touch device scrolling. */
    -webkit-overflow-scrolling: touch;
+   font-family: 'Roboto', sans-serif;
+   font-weight: 400;
 }
 
 #sidebar {
@@ -23,6 +26,11 @@ body {
 
 h4 {
    padding: 16px 16px 16px 16px;
+}
+
+h6 {
+   font-size: 20px;
+   font-weight: 900;
 }
 
 .flex-grid {
@@ -64,43 +72,75 @@ nav a:hover {
    color: black;
 }
 
-
-
-
-#iperbot {
-   background-color: coral;
-}
-#flashcard {
-   background-color: white;
+.dot {
+   height: 12px;
+   width: 12px;
+   background-color: red;
+   border-radius: 50%;
+   z-index: 1;
+   display: inline-block;
+   opacity: 60%;
+   
  }
 
-#iperbot:hover {
-   background-image: url("https://images.pexels.com/photos/67636/rose-blue-flower-rose-blooms-67636.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500");
+.projectCard {
+   overflow: hidden;
+} 
+
+.projectCard button {
+   transform: scale(0.0);
+}
+.projectCard p {
+   font-weight: 300;
+   font-size: 15px;
+   transform: scale(0.0);
+   transform-origin: 20% 40%;
 }
 
-#flashcard:hover {
-  background-image: url(images/flashcards.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-#flashcard:hover button {
+ .projectCard:hover button {
    animation-name: animateLinks;
-   animation-duration: 2s;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+ }
+
+ .projectCard:hover p {
+   animation-name: animateLinks;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
+ } 
+
+ .projectCard:hover span {
+   animation-name: animateCard;
+   animation-duration: 0.5s;
+   animation-fill-mode: forwards;
  }
 
 
 
 @keyframes animateCard {
-
+   0%{
+      transform: scale(1);
+    }
+    
+    100%{
+     transform: scale(60);
+    }
 }
 
 @keyframes animateLinks {
   0%{
-    transform: scale(0.1, 0.1);
+    transform: scale(0.1);
   }
   
   100%{
-   transform: scale(1, 1);
+   transform: scale(1);
   }
 }
+
+
+/* Individual card backgrounds. */
+#flashcard {
+   background-image: url(images/flashcards.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+ }
