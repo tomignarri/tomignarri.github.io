@@ -31,6 +31,7 @@ h4 {
 h6 {
    font-size: 20px;
    font-weight: 900;
+   position: relative;
 }
 
 .flex-grid {
@@ -77,66 +78,48 @@ nav a:hover {
    width: 12px;
    background-color: red;
    border-radius: 50%;
-   z-index: 1;
    display: inline-block;
-   opacity: 60%;
-   
+   opacity: 80%;
+   position: relative;
  }
 
 .projectCard {
+   animation-name: animateCardOff;
    overflow: hidden;
 } 
 
+.projectCard span {
+   /* -webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease; */
+   transition: all 0.5s ease;
+}
+
 .projectCard button {
    transform: scale(0.0);
+   transition: all 0.5s ease;
 }
 .projectCard p {
    font-weight: 300;
    font-size: 15px;
    transform: scale(0.0);
-   transform-origin: 20% 40%;
+   transform-origin: left;
+   transition: all 0.5s ease;
 }
 
  .projectCard:hover button {
-   animation-name: animateLinks;
-   animation-duration: 0.5s;
-   animation-fill-mode: forwards;
+   transform: scale(1);
  }
 
  .projectCard:hover p {
-   animation-name: animateLinks;
-   animation-duration: 0.5s;
-   animation-fill-mode: forwards;
+   transform: scale(1);
  } 
 
  .projectCard:hover span {
-   animation-name: animateCard;
-   animation-duration: 0.5s;
-   animation-fill-mode: forwards;
- }
-
-
-
-@keyframes animateCard {
-   0%{
-      transform: scale(1);
-    }
-    
-    100%{
-     transform: scale(60);
-    }
-}
-
-@keyframes animateLinks {
-  0%{
-    transform: scale(0.1);
-  }
+   transform: scale(80);
   
-  100%{
-   transform: scale(1);
-  }
-}
-
+ }
 
 /* Individual card backgrounds. */
 #flashcard {
