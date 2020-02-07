@@ -103,12 +103,13 @@ h6 {
 
 
 .dot {
-   height: 100px;
-   width: 100px;
+   height: 170px;
+   width: 170px;
    background-color: yellow;
    border-radius: 50%;
-   display: inline-block;
-   position: relative;
+   position: absolute;
+   bottom: 10px;
+   right: 10px;
 
    opacity: 0.8;
 
@@ -123,8 +124,7 @@ h6 {
    -webkit-filter: blur(0);
    -webkit-font-smoothing: antialiased;
 
-   transform: scale(0.3);
-
+   transform: scale(0.1);
 }
 
 .projectCard {
@@ -161,7 +161,7 @@ h6 {
  } 
 
  .projectCard:hover span {
-   transform: scale(20);
+   transform: scale(5.5);
  }
 
 /* Individual card backgrounds. */
@@ -216,6 +216,7 @@ h6 {
    .flex-grid {
       display: block;
       height: auto;
+      
     }
 
    .projectCard {
@@ -238,21 +239,14 @@ h6 {
    }
    
    .dot {
-      height: 12px;
-      width: 12px;
-      background-color: yellow;
-      border-radius: 50%;
-      display: inline-block;
-      opacity: 80%;
-      position: relative;
-   
-      /* Remove blur on animations */
-      filter: blur(0);
-      -webkit-filter: blur(0);
+      height: 190px;
+      width: 190px;
+
+      opacity: 0.5;
    }
 
    .projectCard span {
-      transform: scale(90);
+      transform: scale(5);
     }
     
     .contactEnd {
@@ -268,6 +262,7 @@ h6 {
      display: block;
      width: 100vw;
      height: auto;
+     
    }
 
    #sidebar {
@@ -307,21 +302,13 @@ h6 {
    }
    
    .dot {
-      height: 12px;
-      width: 12px;
-      background-color: yellow;
-      border-radius: 0;
-      display: inline-block;
-      opacity: 70%;
-      position: relative;
-   
-      /* Remove blur on animations */
-      filter: blur(0);
-      -webkit-filter: blur(0);
+      height: 190px;
+      width: 190px;
+      opacity: 0.5;
    }
 
    .projectCard span {
-      transform: scale(90);
+      transform: scale(5);
    }
    
 
