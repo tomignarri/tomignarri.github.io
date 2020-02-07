@@ -13,6 +13,10 @@ body {
    font-weight: 400;
 }
 
+.btn:hover, .btn:focus {
+   background-position: 0 -10px;
+}
+
 #sidebar {
    width: 170px;
    position: fixed;
@@ -77,6 +81,7 @@ body {
 
 .contactContent {
    font-weight: 300;
+   font-size: 15px;
 }
 
 h6 {
@@ -95,18 +100,31 @@ h6 {
    flex: 1;
  }
 
+
+
 .dot {
-   height: 12px;
-   width: 12px;
+   height: 100px;
+   width: 100px;
    background-color: yellow;
    border-radius: 50%;
    display: inline-block;
-   opacity: 80%;
    position: relative;
+
+   opacity: 0.8;
+
+   /* legacy browser opacity */ 
+   -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+   filter: alpha(opacity=50); 
+   -moz-opacity: 0.5;
+   -khtml-opacity: 0.5; 
 
    /* Remove blur on animations */
    filter: blur(0);
    -webkit-filter: blur(0);
+   -webkit-font-smoothing: antialiased;
+
+   transform: scale(0.3);
+
 }
 
 .projectCard {
@@ -143,7 +161,7 @@ h6 {
  } 
 
  .projectCard:hover span {
-   transform: scale(90);
+   transform: scale(20);
  }
 
 /* Individual card backgrounds. */
@@ -236,6 +254,10 @@ h6 {
    .projectCard span {
       transform: scale(90);
     }
+    
+    .contactEnd {
+      height: 35vh;
+    } 
       
 
 }  
@@ -257,9 +279,13 @@ h6 {
       border-bottom: 1px solid black;
    }
    .contact {
-      width: 100vh;
+      width: 100%;
       text-align: center;
    }
+
+   .contactEnd {
+      height: 35vh;
+    }
 
    .projectCard {
       overflow: hidden;
@@ -296,7 +322,7 @@ h6 {
 
    .projectCard span {
       transform: scale(90);
-    }
+   }
    
 
 } 
