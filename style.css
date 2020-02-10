@@ -31,37 +31,44 @@ body {
 }
 
 .contact {
-  height: 0px;
+  max-height: 0px;
   width: calc(100% - 170px);
   float: right;
   background-color: whitesmoke;
 }
 
 .contactStart {
-  -webkit-transition: all 1s ease;  
-  -moz-transition: all 1s ease;  
-  -o-transition: all 1s ease;  
-  -ms-transition: all 1s ease;  
-  transition: all 1s ease;
+  -webkit-transition: max-height 1s linear;  
+  -moz-transition: max-height 1s linear;  
+  -o-transition: max-height 1s linear;  
+  -ms-transition: max-height 1s linear;  
+  transition: max-height 1s linear;
 }
 
 .contactEnd {
-  height: 30vh;
+  -webkit-transition: max-height 1s linear;  
+  -moz-transition: max-height 1s linear;  
+  -o-transition: max-height 1s linear;  
+  -ms-transition: max-height 1s linear;  
+  transition: max-height 1s linear;
+  max-height: 500px;
 }
 
 .nav-link {
-  text-align: center; 
+  display: flex;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */ 
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   color: black;     
 }
 
 .navButtonStart {
-   -webkit-transition: all 1s ease;  
-   -moz-transition: all 1s ease;  
-   -o-transition: all 1s ease;  
-   -ms-transition: all 1s ease;  
-   transition: all 1s ease;
+   -webkit-transition: all 0.5s ease;  
+   -moz-transition: all 0.5s ease;  
+   -o-transition: all 0.5s ease;  
+   -ms-transition: all 0.5s ease;  
+   transition: all 0.5s ease;
 }
 
 .navButtonEnd {
@@ -82,9 +89,17 @@ body {
 .contactContent {
    font-weight: 300;
    font-size: 15px;
+   padding: 16px;
 }
 
 h6 {
+   font-size: 23px;
+   font-weight: 900;
+   margin-bottom: 0px;
+   padding: 10px 10px 10px 10px;
+}
+
+h5 {
    font-size: 20px;
    font-weight: 900;
    position: relative;
@@ -182,7 +197,7 @@ h6 {
 }
 
 #valveVisaid {
-  background-image: url(images/valveVisaid.jpg);
+  background-image: url(images/valveVisaid2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 } 
@@ -211,96 +226,95 @@ h6 {
     background-color: red;
  } 
 
-/* 800 pixel device width */
-@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 3) {
+/* landscape width */
+@media only screen and (max-width: 1024px) 
+{
    .flex-grid {
       display: block;
       height: auto;
-      
     }
 
    .projectCard {
-      overflow: hidden;
       padding: 10px 10px 60px 10px;
    } 
     
     .projectCard button {
       transform: scale(1);
-      transition: all 0.5s ease;
-      transform-origin: left top;
    }
    
    .projectCard p {
-      font-weight: 300;
-      font-size: 15px;
       transform: scale(1);
-      transform-origin: left top;
-      transition: all 0.5s ease;
    }
    
    .dot {
-      height: 190px;
-      width: 190px;
+      height: 250px;
+      width: 250px;
+      bottom: 50px;
+      right: 80px;
 
       opacity: 0.5;
    }
 
    .projectCard span {
-      transform: scale(5);
+      transform: scale(1);
     }
     
-    .contactEnd {
-      height: 35vh;
-    } 
+
       
 
 }  
 
-/* mobile width */
-@media only screen and (max-width: 600px) 
-/* and (-webkit-min-device-pixel-ratio: 3)  */
+/* portrait width */
+@media only screen and (max-width: 640px) 
 {
    .flex-grid {
      display: block;
      width: 100vw;
-     height: auto;
-     
+   }
+
+   .grid-container {
+      margin-top: 10vh;
    }
 
    #sidebar {
-      position: relative;
+      top: 0px;
       width: 100vw;
-      height: auto;
+      height: 10vh;
       text-align: center;
       border-right: 0px;
       border-bottom: 1px solid black;
+      z-index: 1;
    }
+
+   .nav-link {
+      height: 100%;
+      float: right;
+      border-left: 1px solid black;
+      border-bottom: 0;
+   }
+
+   h6 {
+      font-size: 20px;
+      padding: 23px 3px 0px 0px;
+   }
+
    .contact {
       width: 100%;
       text-align: center;
    }
 
-   .contactEnd {
-      height: 35vh;
-    }
+
 
    .projectCard {
-      overflow: hidden;
       padding: 20px 10px 40px 10px;
    } 
 
     .projectCard button {
       transform: scale(1);
-      transition: all 0.5s ease;
-      transform-origin: left top;
    }
    
    .projectCard p {
-      font-weight: 300;
-      font-size: 15px;
       transform: scale(1);
-      transform-origin: left top;
-      transition: all 0.5s ease;
    }
    
    .dot {
@@ -315,3 +329,22 @@ h6 {
    
 
 } 
+
+/* portrait width */
+@media only screen and (max-width: 374px) {
+   h6 {
+      font-size: 17px;
+      padding: 18px 3px 0px 0px;
+   } 
+
+   .contactContent {
+      padding: 1px;
+      font-size: 13px;
+   }
+
+
+   
+
+}
+
+

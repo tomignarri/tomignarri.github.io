@@ -4,4 +4,8 @@
 function activateInfo(){
     document.querySelector(".contactStart").classList.toggle("contactEnd");
     document.querySelector(".navButtonStart").classList.toggle("navButtonEnd");
-};    
+}; 
+
+
+
+
