@@ -261,6 +261,11 @@ h5 {
    .projectCard span {
       transform: scale(1);
     }
+
+    #blankCard {
+       height: 0px;
+       padding: 0px;
+    }
     
 
       
