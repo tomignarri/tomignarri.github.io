@@ -212,7 +212,7 @@ h6 {
  } 
 
 /* 800 pixel device width */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px) and (-webkit-min-device-pixel-ratio: 3) {
    .flex-grid {
       display: block;
       height: auto;
@@ -257,7 +257,9 @@ h6 {
 }  
 
 /* mobile width */
-@media only screen and (max-width: 600px) and (-webkit-min-device-pixel-ratio: 3) {
+@media only screen and (max-width: 600px) 
+/* and (-webkit-min-device-pixel-ratio: 3)  */
+{
    .flex-grid {
      display: block;
      width: 100vw;
