@@ -79,6 +79,7 @@ body {
 
 .navButtonStart:hover {
    color: black;
+   text-decoration: underline;
 }
 
 
@@ -292,6 +293,7 @@ h5 {
       height: 100%;
       float: right;
       border-left: 1px solid black;
+      border-top: 0px;
       border-bottom: 0;
    }
 
@@ -330,9 +332,9 @@ h5 {
    }
 
     /* dot transform */
- .projectCard:hover span {
-   transform: scale(5);
- }
+   .projectCard:hover span {
+     transform: scale(5);
+   }
    
 
 } 
