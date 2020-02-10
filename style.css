@@ -147,6 +147,7 @@ h5 {
    padding: 20px 20px 20px 20px;
 } 
 
+/* dot transform */
 .projectCard span {
    transition: all 0.5s ease;
    filter: blur(0);
@@ -175,6 +176,7 @@ h5 {
    transform: scale(1);
  } 
 
+ /* dot transform */
  .projectCard:hover span {
    transform: scale(5.5);
  }
@@ -326,6 +328,11 @@ h5 {
    .projectCard span {
       transform: scale(5);
    }
+
+    /* dot transform */
+ .projectCard:hover span {
+   transform: scale(5);
+ }
    
 
 } 
