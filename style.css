@@ -17,6 +17,10 @@ body {
    background-position: 0 -10px;
 }
 
+a:hover {
+   text-decoration: none;
+}
+
 #sidebar {
    width: 170px;
    position: fixed;
