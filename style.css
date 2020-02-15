@@ -35,6 +35,10 @@ body {
   width: calc(100% - 170px);
   float: right;
   background-color: whitesmoke;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
 }
 
 .contactStart {
