@@ -182,6 +182,11 @@ h5 {
    transform: scale(5.5);
  }
 
+.btn {
+   position: relative;
+   z-index: 999;
+} 
+
 /* Individual card backgrounds. */
 #flashcard {
   background-image: url(images/flashcard.jpg);
@@ -267,8 +272,6 @@ h5 {
        padding: 0px;
     }
     
-
-      
 
 }  
 
