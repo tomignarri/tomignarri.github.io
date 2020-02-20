@@ -196,8 +196,18 @@ h5 {
 } 
 
 /* Individual card backgrounds. */
+#bookshelfViewer {
+   background-image: url(images/bookshelfviewer.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+ } 
+  
+  #bookshelfViewer .dot {
+     background-color: greenyellow;
+  } 
+
 #flashcard {
-  background-image: url(images/flashcard.jpg);
+  background-image: url(images/flashcards.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -233,14 +243,18 @@ h5 {
 } 
 
 #makeanote {
+  /* Photo by Joanna Kosinska on Unsplash */ 
   background-image: url(images/makeanote.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 } 
+
  
  #makeanote .dot {
     background-color: red;
  } 
+
+
 
 /* landscape width */
 @media only screen and (max-width: 1024px) 
