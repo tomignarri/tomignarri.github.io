@@ -1,22 +1,23 @@
 {
-  "name": "tomignarri.github.io",
-  "version": "1.0.0",
-  "main": "script.js",
+  "name": "threejs-journey-exercise",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "vite build"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
   "devDependencies": {
-    "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.3",
-    "style-loader": "^4.0.0",
-    "webpack": "^5.96.1",
-    "webpack-cli": "^5.1.4"
+    "@vitejs/plugin-react": "4.3",
+    "vite": "^6.2.2",
+    "vite-plugin-restart": "^0.4.2"
   },
   "dependencies": {
-    "express": "^4.21.1"
+    "@react-three/drei": "^10.0.4",
+    "@react-three/fiber": "^9.1.0",
+    "r3f-perf": "^7.2.3",
+    "react": "19.0",
+    "react-dom": "19.0",
+    "three": "^0.174.0"
   }
 }
