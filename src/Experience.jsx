@@ -5,7 +5,7 @@ export default function Experience()
 
     return <>
 
-        <color args={ [ '#241a1a' ] } attach="background" />
+        <color args={ [ '#2f2f2f' ] } attach="background" />
 
         <Environment preset="city" />
         
@@ -20,7 +20,16 @@ export default function Experience()
    
         </PresentationControls>
 
+        <mesh>
+            <torusKnotGeometry />
+            <meshNormalMaterial />
+        </mesh>
 
+        <Html position={[1, 1, 0]}>
+            <div style={{ color: 'white', backgroundColor: 'black', padding: '4px' }}>
+            Hello from HTML!
+            </div>
+        </Html>
 
 
     </>
