@@ -25,11 +25,6 @@ export default function Experience()
             <meshNormalMaterial />
         </mesh>
 
-        <Html position={[1, 1, 0]}>
-            <div style={{ color: 'white', backgroundColor: 'black', padding: '4px' }}>
-            Hello from HTML!
-            </div>
-        </Html>
 
 
     </>
