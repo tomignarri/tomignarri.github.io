@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import Experience from './Experience.jsx'
 import Card from './Card.jsx'
+import Zoom from './Zoom.jsx'
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
 
@@ -24,8 +25,7 @@ root.render(
     >
         <Experience />
         <gridHelper args={[10, 10]} />
-
-        
+        <Zoom />
      
     </Canvas>
 )
