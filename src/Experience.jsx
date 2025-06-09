@@ -1,4 +1,5 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
+import Zoom from './Zoom.jsx'
 
 export default function Experience()
 {
@@ -25,7 +26,8 @@ export default function Experience()
             <meshNormalMaterial />
         </mesh>
 
-
+        <Zoom />
+      
 
     </>
 }
