@@ -17,6 +17,10 @@ body,
     touch-action: none;
 }
 
+.contact {
+    background-color: aliceblue;
+}
+
 .view-all-button {
     position: absolute;
     right: 20px;
