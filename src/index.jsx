@@ -30,6 +30,25 @@ root.render(
         <Experience />
         <gridHelper args={[10, 10]} />
         
+        {/* <Html
+            style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.3)'
+            }}
+        >
+            <h1>Under construction</h1>
+            <p>Check below to view me and some of my work</p>
+            <a href="https://www.linkedin.com/in/thomas-ignarri-07ba8680/">LinkedIn</a>
+        </Html> */}
+
+        <Html
+            style={{
+                backgroundColor: 'rgba(255, 255, 255, 0.3)'
+            }}
+        >
+            <h1>Under construction</h1>
+            <p>Check below to view me and some of my work</p>
+            <a href="https://www.linkedin.com/in/thomas-ignarri-07ba8680/">LinkedIn</a>
+        </Html>
      
     </Canvas>
 )
