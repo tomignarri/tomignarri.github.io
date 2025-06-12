@@ -18,11 +18,22 @@ body,
 }
 
 .contact {
-    background-color: aliceblue;
+    background-color: rgb(46, 53, 59);
 }
 
-.view-all-button {
+nav {
     position: absolute;
-    right: 20px;
+    padding: 0 20px;
     bottom: 20px;
+    box-sizing: border-box;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: end;
 }
+
+nav button {
+
+}
+
+

@@ -1,6 +1,7 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
 import Zoom from './Zoom.jsx'
 import Pan from './Pan.jsx'
+import ViewAll  from './ViewAll.jsx'
 
 export default function Experience()
 {
@@ -24,6 +25,7 @@ export default function Experience()
 
         <Zoom />
         <Pan />
+        <ViewAll />
       
 
     </>
