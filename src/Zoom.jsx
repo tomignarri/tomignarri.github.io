@@ -13,7 +13,8 @@ export default function Zoom()
             camera.zoom = Math.max(30, Math.min(300, camera.zoom))
             camera.updateProjectionMatrix()
         }
-        
+
+
         window.addEventListener('wheel', handleScroll)
         
         return () => {
