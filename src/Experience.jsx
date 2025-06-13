@@ -2,13 +2,21 @@ import { Text, Html, ContactShadows, PresentationControls, Float, Environment, u
 import Zoom from './Zoom.jsx'
 import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
+import Card from './Card.jsx'
 
 export default function Experience()
 {
+    const cardContent1 = (
+        <div style={{ background: 'red', padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
+          <strong>Mesh Label</strong><br />
+          Linked to this box
+        </div>
+    );
+
 
     return <>
 
-        <color args={ [ '#2f2f2f' ] } attach="background" />
+        <color args={ [ '#ffffff' ] } attach="background" />
 
         <Environment preset="city" />
         
@@ -23,6 +31,7 @@ export default function Experience()
    
         </PresentationControls>
 
+        <Card content={cardContent1}  />
         <Zoom />
         <Pan />
         <ViewAll />
