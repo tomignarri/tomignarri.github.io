@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import Experience from './Experience.jsx'
-import Card from './Card.jsx'
+
 
 
 
