@@ -16,20 +16,24 @@ export default function ViewAll() {
 
 
         return () => {
-            console.log('♻️ Cleaning up event listener');
             if (btn) btn.removeEventListener('click', handleClick);
         };
     }, []);
 
     useFrame(() => {
-        console.log(camera.position.x)
-        console.log(camera.position.z)
-        if (camera.zoom >= 30 && camera.position.x === 0 && camera.position.z === 0 && viewAllStarted) {
-            camera.zoom -= 1;
-            camera.position.x -= Math.sign(camera.position.x) * 0.1;
-            camera.position.z -= Math.sign(camera.position.z) * 0.1;
-            console.log('🔍 Zooming out: new camera.zoom =', camera.zoom);
-            camera.updateProjectionMatrix()
+        if ((camera.zoom > 30 || camera.position.x !== 0 || camera.position.z !== 0) && viewAllStarted) {
+            // Zoom with clamping
+            camera.zoom = Math.max(30, camera.zoom - 1);
+
+            // Easing position
+            camera.position.x *= 0.9;
+            camera.position.z *= 0.9;
+
+            // Clamping to zero
+            if (Math.abs(camera.position.x) < 0.01) camera.position.x = 0;
+            if (Math.abs(camera.position.z) < 0.01) camera.position.z = 0;
+
+            camera.updateProjectionMatrix();
         } else if (viewAllStarted) {
             viewAllStarted = false;
         }
