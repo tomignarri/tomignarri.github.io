@@ -3,33 +3,54 @@ import Zoom from './Zoom.jsx'
 import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
+import { store } from './store';
 
 export default function Experience()
 {
     const cardContent1 = (
-        <div style={{ padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
+        <section>
           <h1>Hello</h1>
           <h2>Welcome to my site</h2>
           <p>I'm Tom, a developer focused on usability, clarity, and motion. My work is driven by a belief in engaging interaction.</p>
-        </div>
+        </section>
     );
 
     const contactCard = (
-        <div style={{ padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
+        <section>
 
-        </div>
+        </section>
     );
 
     const projectCard1 = (
-        <div>
+        <section>
             <h1>iperbot</h1>
-        </div>
+            <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">
+                <button>
+                BITBUCKET
+                </button>
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.Iperdesign.Ipergame&hl=en_US" target="_blank">
+                <button>
+                ANDROID
+                </button>
+            </a>
+            <a href="https://apps.apple.com/us/app/iperbot/id1483956161" target="_blank">
+                <button>
+                IPHONE
+                </button>
+            </a>
+            <a href="https://iperlab.com" target="_blank">
+                <button>
+                 PLAY ON DESKTOP
+                </button>
+            </a>
+        </section>
     );
 
 
     return <>
 
-        <color args={ [ '#ffffff' ] } attach="background" />
+        <color args={ [store.expBackgroundColor] } attach="background" />
 
         <Environment preset="city" />
         
@@ -44,7 +65,8 @@ export default function Experience()
    
         </PresentationControls>
 
-        <Card content={cardContent1}  />
+        <Card content={cardContent1} position={ [-6, 3, 0] } />
+        <Card content={projectCard1} position={ [7, 3, 0] } />
         <Zoom />
         <Pan />
         <ViewAll />

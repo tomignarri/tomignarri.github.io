@@ -1,17 +1,18 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
+import { store } from './store';
 
-export default function Card({ content })
+export default function Card({ content, position })
 {
 
     return <>
 
         <mesh
-            position={[0, 3, 0]}
+            position={position}
         >
             <boxGeometry
-                args={[2, 1, 3]}
+                args={[8, 1, 10]}
             />
-            <meshBasicMaterial color="#f0eee9" />
+            <meshBasicMaterial color={store.cardColor} />
             <Html 
                 position={[0, 0.6, 0]} 
                 transform

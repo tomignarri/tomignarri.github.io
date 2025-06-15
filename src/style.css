@@ -79,3 +79,11 @@ button {
 }
 
 
+section {
+    width: 316px;
+    height: 400px;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+
