@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import { useThree } from '@react-three/fiber'
+import { store } from './store';
 
-// get states of pan position
 
 export default function Zoom()
 {
@@ -10,7 +10,7 @@ export default function Zoom()
     useEffect(() => {
         const handleScroll = (e) => {
             camera.zoom += e.deltaY * -0.1
-            camera.zoom = Math.max(30, Math.min(300, camera.zoom))
+            camera.zoom = Math.max(store.maxZoom, Math.min(store.minZoom, camera.zoom))
             camera.updateProjectionMatrix()
         }
 

@@ -1,5 +1,6 @@
 import { useEffect } from 'react'
 import { useThree, useFrame } from '@react-three/fiber'
+import { store } from './store';
 
 export default function ViewAll() {
     const { camera } = useThree();
@@ -21,9 +22,9 @@ export default function ViewAll() {
     }, []);
 
     useFrame(() => {
-        if ((camera.zoom > 30 || camera.position.x !== 0 || camera.position.z !== 0) && viewAllStarted) {
+        if ((camera.zoom > store.maxZoom || camera.position.x !== 0 || camera.position.z !== 0) && viewAllStarted) {
             // Zoom with clamping
-            camera.zoom = Math.max(30, camera.zoom - 1);
+            camera.zoom = Math.max(store.maxZoom, camera.zoom - 1);
 
             // Easing position
             camera.position.x *= 0.9;

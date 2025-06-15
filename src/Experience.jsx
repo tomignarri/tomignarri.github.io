@@ -7,9 +7,22 @@ import Card from './Card.jsx'
 export default function Experience()
 {
     const cardContent1 = (
-        <div style={{ background: 'red', padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
-          <strong>Mesh Label</strong><br />
-          Linked to this box
+        <div style={{ padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
+          <h1>Hello</h1>
+          <h2>Welcome to my site</h2>
+          <p>I'm Tom, a developer focused on usability, clarity, and motion. My work is driven by a belief in engaging interaction.</p>
+        </div>
+    );
+
+    const contactCard = (
+        <div style={{ padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
+
+        </div>
+    );
+
+    const projectCard1 = (
+        <div>
+            <h1>iperbot</h1>
         </div>
     );
 
