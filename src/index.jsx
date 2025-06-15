@@ -31,6 +31,7 @@ root.render(
                 position: [ 0, 7, 0 ]
             } } 
         >
+            <ambientLight intensity={0.5} />
             <Experience />
             <gridHelper args={[10, 10]} />
  
