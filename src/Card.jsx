@@ -15,11 +15,9 @@ export default function Card({ content })
             <Html 
                 position={[0, 0.6, 0]} 
                 transform
-                rotation={[Math.PI / 2, 0, 0]}
+                rotation={[-Math.PI / 2, 0, 0]}
             >
-                <div style={{ background: 'red', padding: '6px', borderRadius: '6px', fontSize: '14px' }}>
-                    <strong>Mesh Label</strong><br />
-                </div>
+                {content}
             </Html>
         </mesh>
         
