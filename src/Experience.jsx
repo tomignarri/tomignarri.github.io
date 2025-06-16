@@ -65,8 +65,8 @@ export default function Experience()
    
         </PresentationControls>
 
-        <Card content={cardContent1} position={ [-6, 3, 0] } />
-        <Card content={projectCard1} position={ [7, 3, 0] } />
+        <Card content={cardContent1} position={ [-6, 3, 2] } />
+        <Card content={projectCard1} position={ [7, 3, 2] } />
         <Zoom />
         <Pan />
         <ViewAll />
