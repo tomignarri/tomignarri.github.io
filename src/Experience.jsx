@@ -5,21 +5,20 @@ import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
 import { store } from './store';
 
+
 export default function Experience()
 {
-    const cardContent1 = (
-        <section>
-          <h1>Hello</h1>
-          <h2>Welcome to my site</h2>
-          <p>I'm Tom, a developer focused on usability, clarity, and motion. My work is driven by a belief in engaging interaction.</p>
-        </section>
-    );
+    const topNavButton = document.querySelector('#top-nav button');
+    const topNav = document.querySelector('#top-nav');
+    let topNavOpen = false;
 
-    const contactCard = (
-        <section>
+    const toggleTopNav = () => {
+        topNav.style.height = '200px';
+    }
 
-        </section>
-    );
+    topNavButton.addEventListener('click', toggleTopNav);
+
+
 
     const projectCard1 = (
         <section>
@@ -47,6 +46,41 @@ export default function Experience()
         </section>
     );
 
+    const projectCard2 = (
+        <section>
+            <h1>Arcutis</h1>
+        </section>
+    )
+
+    const projectCard3 = (
+        <section>
+            <h1>Etranadez</h1>
+        </section>
+    )
+
+    const projectCard4 = (
+        <section>
+            <h1>Ingrezza</h1>
+            <p>web projects, ivas</p>
+        </section>
+    )
+
+    const projectCard5 = (
+        <section>
+            <h1>Cooper Surgical</h1>
+        </section>
+    )
+
+    const projectCard6 = (
+        <section>
+            <h1>Bookshelf Viewer</h1>
+        </section>
+    )
+
+
+
+    
+
 
     return <>
 
@@ -65,8 +99,8 @@ export default function Experience()
    
         </PresentationControls>
 
-        <Card content={cardContent1} position={ [-6, 3, 2] } />
-        <Card content={projectCard1} position={ [7, 3, 2] } />
+        <Card content={projectCard1} position={ [-6, 3, 2] } />
+        <Card content={projectCard2} position={ [7, 3, 2] } />
         <Zoom />
         <Pan />
         <ViewAll />
