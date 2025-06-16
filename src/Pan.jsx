@@ -15,37 +15,63 @@ export default function Pan()
             y: undefined
         };
 
+        const getXY = (e) => {
+            if (e.touches && e.touches.length > 0) {
+                return {
+                    x: e.touches[0].clientX / 100,
+                    y: e.touches[0].clientY / 100
+                };
+            } else {
+                return {
+                    x: e.clientX / 100,
+                    y: e.clientY / 100
+                };
+            }
+        };
+
 
         const handleDrag = (e) => {
-            if(isDragging) {
-                const currentX = e.clientX / 100;
-                const currentY = e.clientY / 100;
+            if (!isDragging) return;
+
+            const { x, y } = getXY(e);
+            const deltaX = x - prevFrame.x;
+            const deltaY = y - prevFrame.y;
         
-                const deltaX = currentX - prevFrame.x;
-                const deltaY = currentY - prevFrame.y;
+            camera.position.x -= deltaX;
+            camera.position.z -= deltaY;
         
-                camera.position.x -= deltaX;
-                camera.position.z -= deltaY;
-        
-                prevFrame.x = currentX;
-                prevFrame.y = currentY;
-            }
+            prevFrame.x = x;
+            prevFrame.y = y;
+        }
+
+        const startPan = (e) => {
+            const { x, y } = getXY(e);
+            prevFrame.x = x;
+            prevFrame.y = y;
+            isDragging = true;
         }
         
 
-        window.addEventListener('mousedown', (e) => {
-            prevFrame.x = e.clientX / 100;
-            prevFrame.y = e.clientY / 100;
-            isDragging = true;
-        })
-        window.addEventListener('mousemove', handleDrag)
-        window.addEventListener('mouseup', () => { isDragging = false })
+        window.addEventListener('mousedown', startPan);
+        window.addEventListener("touchstart", startPan);
+
+        window.addEventListener('mousemove', handleDrag);
+        window.addEventListener('touchmove', handleDrag);
+
+
+        window.addEventListener('mouseup', () => { isDragging = false });
+        window.addEventListener('touchend', () => { isDragging = false });
         
 
         return () => {
-            window.removeEventListener('mousedown', () => { isDragging = true })
+            window.removeEventListener('mousedown', startPan);
+            window.removeEventListener('touchstart', startPan);
+
             window.removeEventListener('mousemove', handleDrag)
-            window.removeEventListener('mouseup', () => { isDragging = false })
+            window.removeEventListener('touchmove', handleDrag)
+
+            window.removeEventListener('mouseup', () => { isDragging = false });
+            window.removeEventListener('touchend', () => { isDragging = false });
         }
     }, [])
 
