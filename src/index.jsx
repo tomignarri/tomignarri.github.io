@@ -1,7 +1,8 @@
-import './style.css'
+//import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
+import './main.scss'
 import Experience from './Experience.jsx'
 
 
@@ -13,10 +14,14 @@ const root = ReactDOM.createRoot(document.querySelector('#root'))
 
 
 
-
 root.render(
     <>
-        <nav>
+        <nav id="top-nav">
+            <button>
+                About me.
+            </button>
+        </nav>
+        <nav id="bottom-nav">
             <button id="full-zoom-out">View all</button>
         </nav>
 
