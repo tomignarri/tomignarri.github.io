@@ -4,5 +4,5 @@ export const store = {
 
     //colors
     expBackgroundColor: '#f2f2f2',
-    cardColor: '#a5afc2'
+    cardColor: '#ffffff'
 }

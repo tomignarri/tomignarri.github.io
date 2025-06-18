@@ -16,6 +16,10 @@ root.render(
             <button>
                 About me.
             </button>
+            <article>
+                <h1>Hello</h1>
+                <p>My name is Tom Ignarri. I'm a developer based in Philadelphia, PA.</p>
+            </article>
         </nav>
         <nav id="bottom-nav">
             <button id="full-zoom-out">View all</button>
