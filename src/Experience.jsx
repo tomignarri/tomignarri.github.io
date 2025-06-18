@@ -1,22 +1,36 @@
-import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
+import { PresentationControls, Environment } from '@react-three/drei'
 import Zoom from './Zoom.jsx'
 import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
 import { store } from './store';
+import { useState } from 'react'
 
 
 export default function Experience()
 {
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+
     const topNavButton = document.querySelector('#top-nav button');
     const topNav = document.querySelector('#top-nav');
+    const aboutContent = document.querySelector('#top-nav article');
     let topNavOpen = false;
 
     const toggleTopNav = () => {
-        topNav.style.height = '200px';
+        if(!topNavOpen) {
+            topNav.style.height = '200px';
+            aboutContent.style.display = 'block';
+            topNavOpen = true;
+        } else {
+            topNav.style.height = '32px';
+            aboutContent.style.display = 'none';
+            topNavOpen = false;
+        }
     }
 
     topNavButton.addEventListener('click', toggleTopNav);
+    topNavButton.addEventListener('touch', toggleTopNav);
 
 
 
@@ -46,41 +60,6 @@ export default function Experience()
         </section>
     );
 
-    const projectCard2 = (
-        <section>
-            <h1>Arcutis</h1>
-        </section>
-    )
-
-    const projectCard3 = (
-        <section>
-            <h1>Etranadez</h1>
-        </section>
-    )
-
-    const projectCard4 = (
-        <section>
-            <h1>Ingrezza</h1>
-            <p>web projects, ivas</p>
-        </section>
-    )
-
-    const projectCard5 = (
-        <section>
-            <h1>Cooper Surgical</h1>
-        </section>
-    )
-
-    const projectCard6 = (
-        <section>
-            <h1>Bookshelf Viewer</h1>
-        </section>
-    )
-
-
-
-    
-
 
     return <>
 
@@ -99,8 +78,33 @@ export default function Experience()
    
         </PresentationControls>
 
-        <Card content={projectCard1} position={ [-6, 3, 2] } />
-        <Card content={projectCard2} position={ [7, 3, 2] } />
+        <Card 
+            title="Arcutis" 
+            position={ [-18, 3, -6] } 
+            techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
+        />
+        <Card 
+            title="Etranadez" 
+            position={ [-6, 3, -6] }
+            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
+        />
+        <Card 
+            title="Ingrezza" 
+            position={ [6, 3, -6] }
+            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React"
+        />
+        <Card 
+            title="Cooper Surgical" 
+            position={ [18, 3, -6] }
+            techUsed="Javascript, HTML, SCSS, Wordpress"
+        />
+        <Card 
+            title="Iperbot" 
+            position={ [7, 3, 6] }
+            techUsed="Unity, C#"
+        />
+        {/* <Card title="Bookshelf Viewer" position={ [7, 3, 6] } />
+        <Card title="Government Bodies" position={ [7, 3, 6] } /> */}
         <Zoom />
         <Pan />
         <ViewAll />

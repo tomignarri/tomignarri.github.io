@@ -1,7 +1,7 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
 import { store } from './store';
 
-export default function Card({ content, position })
+export default function Card({ title, techUsed, position })
 {
 
     return <>
@@ -18,7 +18,10 @@ export default function Card({ content, position })
                 transform
                 rotation={[-Math.PI / 2, 0, 0]}
             >
-                {content}
+                <section>
+                    <h1>{title}</h1>
+                    <h3>{techUsed}</h3>
+                </section>
             </Html>
         </mesh>
         
