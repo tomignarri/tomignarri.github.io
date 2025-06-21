@@ -4,7 +4,7 @@ import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
 import { store } from './store';
-import { useState } from 'react'
+import { useState, useEffect, useRef } from 'react'
 
 
 export default function Experience()
@@ -31,8 +31,29 @@ export default function Experience()
 
     topNavButton.addEventListener('click', toggleTopNav);
     topNavButton.addEventListener('touch', toggleTopNav);
+    
+    const desktopPositions = [
+        [-18, 3, -6],
+        [-6, 3, -6],
+        [6, 3, -6],
+        [18, 3, -6],
+        [7, 3, 6]
+    ];
+
+    const mobilePositions = [
+        [0, 3, -8],
+        [0, 3, 0],
+        [0, 3, 8],
+        [0, 3, 16],
+        [0, 3, 24]
+    ];
 
 
+
+    const myPositionArray = isMobile ? mobilePositions : desktopPositions;
+
+
+    
 
     const projectCard1 = (
         <section>
@@ -80,27 +101,27 @@ export default function Experience()
 
         <Card 
             title="Arcutis" 
-            position={ [-18, 3, -6] } 
+            position={ myPositionArray[0] } 
             techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
         />
         <Card 
             title="Etranadez" 
-            position={ [-6, 3, -6] }
+            position={ myPositionArray[1] }
             techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
         />
         <Card 
             title="Ingrezza" 
-            position={ [6, 3, -6] }
+            position={ myPositionArray[2] }
             techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React"
         />
         <Card 
             title="Cooper Surgical" 
-            position={ [18, 3, -6] }
+            position={ myPositionArray[3] }
             techUsed="Javascript, HTML, SCSS, Wordpress"
         />
         <Card 
             title="Iperbot" 
-            position={ [7, 3, 6] }
+            position={ myPositionArray[4] }
             techUsed="Unity, C#"
         />
         {/* <Card title="Bookshelf Viewer" position={ [7, 3, 6] } />
