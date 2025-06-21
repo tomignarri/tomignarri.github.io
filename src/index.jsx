@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import { Html } from '@react-three/drei'
 import './main.scss'
 import Experience from './Experience.jsx'
+import Intro from './Intro.jsx'
 
 
 const root = ReactDOM.createRoot(document.querySelector('#root'))
@@ -24,6 +25,8 @@ root.render(
         <nav id="bottom-nav">
             <button id="full-zoom-out">View all</button>
         </nav>
+
+        <Intro />
 
         <Canvas
             className="r3f"
