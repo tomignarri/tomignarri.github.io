@@ -33,7 +33,7 @@ root.render(
             orthographic
             camera={ {
                 fov: 45,
-                zoom: 100,
+                zoom: 30,
                 near: 0.1,
                 far: 200,
                 position: [ 0, 7, 0 ]
