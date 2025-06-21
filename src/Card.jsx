@@ -1,7 +1,7 @@
 import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
 import { store } from './store';
 
-export default function Card({ title, techUsed, position })
+export default function Card({ title, techUsed, position, links })
 {
 
     return <>
@@ -21,6 +21,8 @@ export default function Card({ title, techUsed, position })
                 <section>
                     <h1>{title}</h1>
                     <h3>{techUsed}</h3>
+                    <p></p>
+                    {links}
                 </section>
             </Html>
         </mesh>
