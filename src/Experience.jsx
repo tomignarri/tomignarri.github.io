@@ -53,31 +53,20 @@ export default function Experience()
     const myPositionArray = isMobile ? mobilePositions : desktopPositions;
 
 
+    const iperbotButtons = <>
+        <a href="https://iperdesign.com/iperbot-game/" target='_blank'>Play the game</a>
+        <br />
+        <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
+    </>;
+
+
     
 
     const projectCard1 = (
         <section>
             <h1>iperbot</h1>
-            <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">
-                <button>
-                BITBUCKET
-                </button>
-            </a>
-            <a href="https://play.google.com/store/apps/details?id=com.Iperdesign.Ipergame&hl=en_US" target="_blank">
-                <button>
-                ANDROID
-                </button>
-            </a>
-            <a href="https://apps.apple.com/us/app/iperbot/id1483956161" target="_blank">
-                <button>
-                IPHONE
-                </button>
-            </a>
-            <a href="https://iperlab.com" target="_blank">
-                <button>
-                 PLAY ON DESKTOP
-                </button>
-            </a>
+            <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
+
         </section>
     );
 
@@ -110,9 +99,9 @@ export default function Experience()
             techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
         />
         <Card 
-            title="Ingrezza" 
+            title="Neurocrine/Ingrezza" 
             position={ myPositionArray[2] }
-            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React"
+            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React, NodeJS"
         />
         <Card 
             title="Cooper Surgical" 
@@ -123,9 +112,8 @@ export default function Experience()
             title="Iperbot" 
             position={ myPositionArray[4] }
             techUsed="Unity, C#"
+            links={ iperbotButtons }
         />
-        {/* <Card title="Bookshelf Viewer" position={ [7, 3, 6] } />
-        <Card title="Government Bodies" position={ [7, 3, 6] } /> */}
         <Zoom />
         <Pan />
         <ViewAll />
