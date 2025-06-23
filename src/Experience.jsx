@@ -59,16 +59,25 @@ export default function Experience()
         <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
     </>;
 
+    const iperbotContent = <>
+        <article>
+            <p>IperBot is an internal project developed by several interns and designers at 
+                    Iperdesign. This was my first project in Unity. It was a deep dive into a very 
+                    unfamiliar API which made for a challenging experience. .</p>
+            <img alt="iperbot-img-1" draggable="false" src="gifs/iperbot_2.gif" />
+        </article>
+        <article>
+            <p>Testing the game with users 
+                    was a major part of this project as well. It was important that the difficulty was 
+                    appropriate in such a way that experienced gamers could have fun and less experienced 
+                    gamers would not be overwhelmed.</p>
+            <img alt="iperbot-img-1" draggable="false" src="gifs/iperbot_1.gif" />
+        </article>
+    </>
+
 
     
 
-    const projectCard1 = (
-        <section>
-            <h1>iperbot</h1>
-            <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
-
-        </section>
-    );
 
 
     return <>
@@ -113,6 +122,7 @@ export default function Experience()
             position={ myPositionArray[4] }
             techUsed="Unity, C#"
             links={ iperbotButtons }
+            content={ iperbotContent }
         />
         <Zoom />
         <Pan />

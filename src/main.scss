@@ -17,8 +17,11 @@ $text: #2e2e2e;
 $card: #e9e9e9;
 $accent: #e28743;
 $btn-hover: #878787;
+$yellow: #efe81b;
 
-/* hjghjkkhj */
+/* spacing */
+$standard-spacing: 15px;
+$small-spacing: 5px;
 
 
 .r3f {
@@ -82,8 +85,8 @@ nav {
 
 
 #bottom-nav {
-    padding: 0 20px;
-    bottom: 20px;
+    padding: 0 $standard-spacing;
+    bottom: $standard-spacing;
     justify-content: end;
 }
 
@@ -93,12 +96,14 @@ h1, h2, h3, p, button, a {
     font-family: "Inter", sans-serif;
     color: $text;
     margin: 0;
+    box-sizing: border-box;
 }
 
 
 h1 {
-    font-size: 24px;
+    font-size: 26px;
     font-weight: 700;
+    line-height: 28px;
 }
 
 h2 {
@@ -109,12 +114,17 @@ h2 {
 
 h3 {
     font-weight: 400;
-    font-size: 18px;
+    font-size: 12px;
+    font-style: italic;
 }
 
 p {
     font-size: medium;
     font-weight: 300;
+    font-size: 8px;
+}
+
+a {
     font-size: 12px;
 }
 
@@ -129,11 +139,44 @@ button {
 }
 
 
-section {
-    width: 316px;
+.card {
+    width: 480px;
     height: 400px;
-    padding: 15px;
+    padding: $standard-spacing;
     box-sizing: border-box;
+
+    /* Link area */
+    aside {
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: $yellow;
+        box-sizing: border-box;
+        padding: $small-spacing;
+    }
+
+    /* Content row */
+    article {
+        display: flex;
+        flex-direction: row;
+        align-items: start;
+        margin-top: $standard-spacing;
+        h3 {
+            margin-top: $small-spacing;
+        }
+        img {
+            max-width: 250px;
+            width: 100%;
+            height: auto;
+            user-drag: none;
+            -webkit-user-drag: none; /* For WebKit browsers like Chrome and Safari */
+            -moz-user-drag: none;    /* For Firefox */
+            -ms-user-drag: none;     /* For Internet Explorer */
+        }
+        p {
+            padding-right: $standard-spacing;
+        }
+    }
 }
 
 
@@ -150,7 +193,7 @@ section {
     z-index: 1;
     transition: opacity 1.5s ease;
     article {
-        padding: 20px;
+        padding: $standard-spacing;
         box-sizing: border-box;
         max-width: 300px;
         max-height: 300px;
