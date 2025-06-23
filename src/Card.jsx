@@ -23,6 +23,9 @@ export default function Card({ title, techUsed, position, links, content })
                     <h3>{techUsed}</h3>
                     <aside>{links}</aside>
                     {content}
+                    <div className='card-hover-container'>
+                        <h1></h1>
+                    </div>
                 </section>
             </Html>
         </mesh>
