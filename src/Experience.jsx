@@ -32,28 +32,29 @@ export default function Experience()
     topNavButton.addEventListener('click', toggleTopNav);
     topNavButton.addEventListener('touch', toggleTopNav);
     
-    const desktopPositions = [
-        [-18, 3, -6],
-        [-6, 3, -6],
-        [6, 3, -6],
-        [18, 3, -6],
-        [7, 3, 6]
-    ];
+    const dtPositions = {
+        arcutis: [-18, 3, -6],
+        csl: [0, 3, -6],
+        neuro: [18, 3, -6],
+        cooper: [-6, 3, 6],
+        iper: [7, 3, 6]
+    };
 
-    const mobilePositions = [
-        [0, 3, -8],
-        [0, 3, 0],
-        [0, 3, 8],
-        [0, 3, 16],
-        [0, 3, 24]
-    ];
-
-
-
-    const myPositionArray = isMobile ? mobilePositions : desktopPositions;
+    
+    const mbPositions = {
+        arcutis: [0, 3, -8],
+        csl: [0, 3, 0],
+        neuro: [0, 3, 8],
+        cooper: [0, 3, 16],
+        iper: [0, 3, 24]
+    };
 
 
-    const iperbotButtons = <>
+
+    const myCardPositions = isMobile ? mbPositions : dtPositions;
+
+
+    const iperbotLinks = <>
         <a href="https://iperdesign.com/iperbot-game/" target='_blank'>Play the game</a>
         <br />
         <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
@@ -75,10 +76,25 @@ export default function Experience()
         </article>
     </>
 
+    const cslLinks = <>
+        <a href="https://pharmawards.com/2023-w3-hemevolution-mkt-integrated-campaign/" target='_blank'>View campaign</a>
+    </>
+
+    const cslContent = <>
+        <article>
+            <p>This is a campaign that I was a part of while at Abelson Taylor. 
+                My colleages and I were integral to the digital execution of an educational campaign 
+                on the advances in gene therapy for Hemophilia B treatment.</p>
+            <img />
+        </article>
+        <article>
+            <p>My role was spearheading the development of a website for patients.</p>
+
+        </article>
+    </>
+
 
     
-
-
 
     return <>
 
@@ -99,29 +115,32 @@ export default function Experience()
 
         <Card 
             title="Arcutis" 
-            position={ myPositionArray[0] } 
+            position={ myCardPositions.arcutis } 
             techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
         />
-        <Card 
-            title="Etranadez" 
-            position={ myPositionArray[1] }
-            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
-        />
+     
         <Card 
             title="Neurocrine/Ingrezza" 
-            position={ myPositionArray[2] }
+            position={ myCardPositions.neuro }
             techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React, NodeJS"
         />
         <Card 
             title="Cooper Surgical" 
-            position={ myPositionArray[3] }
+            position={ myCardPositions.cooper }
             techUsed="Javascript, HTML, SCSS, Wordpress"
         />
         <Card 
+            title="CSL Behring" 
+            position={ myCardPositions.csl }
+            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
+            links={ cslLinks }
+            content={ cslContent }
+        />
+        <Card 
             title="Iperbot" 
-            position={ myPositionArray[4] }
+            position={ myCardPositions.iper }
             techUsed="Unity, C#"
-            links={ iperbotButtons }
+            links={ iperbotLinks }
             content={ iperbotContent }
         />
         <Zoom />
