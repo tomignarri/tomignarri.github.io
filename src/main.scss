@@ -146,7 +146,7 @@ button {
     box-sizing: border-box;
 
     .card-hover-container {
-        
+
     }
 
     /* Link area */
@@ -176,6 +176,9 @@ button {
             -webkit-user-drag: none; /* For WebKit browsers like Chrome and Safari */
             -moz-user-drag: none;    /* For Firefox */
             -ms-user-drag: none;     /* For Internet Explorer */
+        }
+        video {
+            max-width: 250px;
         }
         p {
             padding-right: $standard-spacing;

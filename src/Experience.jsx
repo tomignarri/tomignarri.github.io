@@ -4,7 +4,7 @@ import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
 import { store } from './store';
-import { useState, useEffect, useRef } from 'react'
+import { useState } from 'react'
 
 
 export default function Experience()
@@ -33,11 +33,11 @@ export default function Experience()
     topNavButton.addEventListener('touch', toggleTopNav);
     
     const dtPositions = {
-        arcutis: [-18, 3, -6],
+        arcutis: [-15, 3, -6],
         csl: [0, 3, -6],
-        neuro: [18, 3, -6],
-        cooper: [-6, 3, 6],
-        iper: [7, 3, 6]
+        neuro: [15, 3, -6],
+        cooper: [-8, 3, 6],
+        iper: [8, 3, 6]
     };
 
     
@@ -48,7 +48,6 @@ export default function Experience()
         cooper: [0, 3, 16],
         iper: [0, 3, 24]
     };
-
 
 
     const myCardPositions = isMobile ? mbPositions : dtPositions;
@@ -65,7 +64,7 @@ export default function Experience()
             <p>IperBot is an internal project developed by several interns and designers at 
                     Iperdesign. This was my first project in Unity. It was a deep dive into a very 
                     unfamiliar API which made for a challenging experience. .</p>
-            <img alt="iperbot-img-1" draggable="false" src="gifs/iperbot_2.gif" />
+            <img alt="iperbot-img-2" draggable="false" src="gifs/iperbot_2.gif" />
         </article>
         <article>
             <p>Testing the game with users 
@@ -82,14 +81,41 @@ export default function Experience()
 
     const cslContent = <>
         <article>
-            <p>This is a campaign that I was a part of while at Abelson Taylor. 
-                My colleages and I were integral to the digital execution of an educational campaign 
-                on the advances in gene therapy for Hemophilia B treatment.</p>
-            <img />
+            <p>
+                This campaign was one I contributed to during my time at AbelsonTaylor.
+                Working closely with my colleagues, we played a key role in the digital execution of an 
+                educational initiative showcasing advances in gene therapy for Hemophilia B treatment.
+            </p>
+            <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-1.mp4" type="video/mp4" /></video>
         </article>
         <article>
-            <p>My role was spearheading the development of a website for patients.</p>
+            <p>
+                My role was to spearhead the development of a website for patients. 
+                Our designers created a variety of interactive elements and animations, which I implemented using the Greensock library.
+                Pictured on the right is a form that communicated with an api built in ASP.NET.
+            </p>
+            <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-2.mp4" type="video/mp4" /></video>
+        </article>
+    </>
 
+    const arcutisLinks = <>
+        <a href="https://pharmawards.com/2024-arcutis-dtp-cream-that-can/#website" target='_blank'>View campaign</a>
+    </>
+
+    const arcutisContent = <>
+        <article>
+            <p>
+                Arcutis's topical product, Zoryve, was a large campaign encompassing many digital executions.
+                I was a part of a variety of emails and online ads, but my primary project for this campaign was a website for both patients and healthcare providers.
+                This was a project that was full of challenging problems and tight deadlines, where I was often using tools with which I did not have a lot of experience.
+            </p>
+        </article>
+        <article>
+            <p>
+                Part of this project which I was primarily resposible for was the front-end of a system for patients to register for copay cards for the product.
+                Successful communication with the IT team of our client and an external vendor was pivotal. We would frequently coordinate together to diagnose and fix issues 
+                with the system.
+            </p>
         </article>
     </>
 
@@ -117,6 +143,8 @@ export default function Experience()
             title="Arcutis" 
             position={ myCardPositions.arcutis } 
             techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
+            content={ arcutisContent }
+            links={ arcutisLinks }
         />
      
         <Card 
