@@ -1,8 +1,21 @@
-import { Text, Html, ContactShadows, PresentationControls, Float, Environment, useGLTF } from '@react-three/drei'
+import { Html } from '@react-three/drei'
 import { store } from './store';
+import { useEffect } from 'react'
 
 export default function Card({ title, techUsed, position, links, content })
 {
+
+    useEffect(() => {
+        const portfolioVideos = document.querySelectorAll('.card video')
+
+        portfolioVideos.forEach((video) => {
+            video.play().catch((error) => {
+                console.log('Autoplay failed:', error);
+            });
+        });
+    }, [])
+    
+
 
     return <>
 

@@ -45,7 +45,6 @@ root.render(
         >
             <ambientLight intensity={0.5} />
             <Experience />
-            <gridHelper args={[10, 10]} />
  
         </Canvas>
 
