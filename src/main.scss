@@ -187,8 +187,21 @@ button {
     }
 }
 
+#zoom-intro {
+    aside {
+            
+    }
+    aside:hover {
+        background-color: #2e2e2e;
+    }
+}
 
-#intro-container {
+#pan-intro {
+    
+}
+
+
+.intro-container {
     width: 100%;
     height: 100%;
     background-color: rgba(206, 206, 206, 0.5);
@@ -212,7 +225,6 @@ button {
         align-items: center;
         h1 {
             color: $card;
-            
         }
         aside {
             border-radius: 100px;

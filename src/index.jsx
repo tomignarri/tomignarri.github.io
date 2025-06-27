@@ -1,10 +1,11 @@
 //import './style.css'
 import ReactDOM from 'react-dom/client'
 import { Canvas } from '@react-three/fiber'
-import { Html } from '@react-three/drei'
 import './main.scss'
 import Experience from './Experience.jsx'
-import Intro from './Intro.jsx'
+import PanIntro from './PanIntro.jsx'
+import ZoomIntro from './ZoomIntro.jsx'
+import { store } from './store';
 
 
 
@@ -30,14 +31,17 @@ root.render(
             <button id="full-zoom-out">View all</button>
         </nav>
 
-        <Intro />
+        <section className="intro-container">
+            <ZoomIntro />
+            <PanIntro />
+        </section>
 
         <Canvas
             className="r3f"
             orthographic
             camera={ {
                 fov: 45,
-                zoom: 30,
+                zoom: store.startingZoom,
                 near: 0.1,
                 far: 200,
                 position: [ 0, 7, 0 ]
