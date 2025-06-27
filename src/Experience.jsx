@@ -130,6 +130,8 @@ export default function Experience()
 
 
     const neurocrineLinks = <>
+        <a href="https://www.ingrezza.com/tardive-dyskinesia" target='_blank'>View Ingrezza</a>
+        <br />
         <a href="https://www.morethanhd.com/" target='_blank'>View More Than HD</a>
     </>
 
@@ -156,7 +158,19 @@ export default function Experience()
         </article>
     </>
 
+    
 
+    const cooperContent = <>
+        <article>
+            <p>
+                This is a project that I built indepentenly during my time at AbelsonTaylor. Cooper Surgical needed a temporary page for a new surgical
+                device for uterine positioning. An interactive element and a form was necessary to show the features of the product and to gauge 
+                interest from potential clients. The project was built entirely custom in vanilla javascript and integrated into wordpress as a custom 
+                theme, using a hubspot api and database to store data where our client could access it.
+            </p>
+            <video autoPlay loop muted playsInline><source src="videos/cooper-video-1.mp4" type="video/mp4" /></video>
+        </article>
+    </>
 
 
 
@@ -200,6 +214,7 @@ export default function Experience()
             title="Cooper Surgical" 
             position={ myCardPositions.cooper }
             techUsed="Javascript, HTML, SCSS, Wordpress"
+            content={ cooperContent }
         />
         <Card 
             title="CSL Behring" 
