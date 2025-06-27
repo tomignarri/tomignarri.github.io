@@ -101,7 +101,7 @@ export default function Experience()
     const arcutisLinks = <>
         <a href="https://pharmawards.com/2024-arcutis-dtp-cream-that-can/#website" target='_blank'>View campaign</a>
         <br />
-        <a href="https://www.zoryve.com/save-with-zoryve-direct">View the website</a>
+        <a href="https://www.zoryve.com/save-with-zoryve-direct" target='_blank'>View the website</a>
     </>
 
     const arcutisContent = <>
@@ -130,7 +130,7 @@ export default function Experience()
 
 
     const neurocrineLinks = <>
-        <a href="https://www.morethanhd.com/">View More Than HD</a>
+        <a href="https://www.morethanhd.com/" target='_blank'>View More Than HD</a>
     </>
 
 
@@ -139,18 +139,20 @@ export default function Experience()
             <p>
                 Neurocrine was one client that had a particularly important. I was involved with of variety of
                 websites, Interactive Visual Aids (IVA), email campaigns, and online banner advertisements. The largest of 
-                these was a brand called Ingrezza. These projects went through many different iterations and additions. Fast turn around 
+                these was a brand called Ingrezza. These projects went through many different iterations and additions. Fast turnaround 
                 time was essential, as was coordination with my developer colleagues and other teams across due to the large volume of 
                 content and detail needed for this brand.
             </p>
+            <video autoPlay loop muted playsInline><source src="videos/neurocrine-video-1.mp4" type="video/mp4" /></video>
         </article>
         <article>
             <p>
-                One project for this client where I was able to utilize my knowledge in Node JS, was for an educational site to serve 
+                One project for this client where I was able to utilize my knowledge in Node.js, was for an educational site to serve 
                 patients, healthcare providers and whomever, to learn about Huntington's Disease. The title of the project is More Than HD.
-                This was built from the ground up using vanilla javascript and NodeJS. We built an anonymous, dynamic polling system to collect data 
-                about users of the site using that Node backend.JS
+                This was built from the ground up using vanilla javascript and Node.js. We built an anonymous, dynamic polling system to collect data 
+                about users of the site using that Node.js backend.
             </p>
+            <video autoPlay loop muted playsInline><source src="videos/neurocrine-video-2.mp4" type="video/mp4" /></video>
         </article>
     </>
 
@@ -186,11 +188,13 @@ export default function Experience()
             content={ arcutisContent }
             links={ arcutisLinks }
         />
-     
+    
         <Card 
             title="Neurocrine" 
             position={ myCardPositions.neuro }
-            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React, NodeJS"
+            techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React, Node.js"
+            links={ neurocrineLinks }
+            content={ neurocrineContent }
         />
         <Card 
             title="Cooper Surgical" 
