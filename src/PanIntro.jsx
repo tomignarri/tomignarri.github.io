@@ -2,11 +2,11 @@ import { memo, useEffect } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHandBackFist, faHand } from '@fortawesome/free-solid-svg-icons'
 
-const PanIntro = memo(function PanIntro() {
+const PanIntro = memo(function PanIntro({ introPartDone, setIntroPartDone }) {
 
     useEffect(() => {
         const panIntroContainer = document.querySelector('#pan-intro');
-        const zoomIntroContainer = document.querySelector('#zoom-intro');
+        const parentOverlay = document.querySelector('.intro-container')
         const grabArea = document.querySelector('#pan-intro aside');
         const grabIcon = document.querySelector('#grab-icon');
         const openHandIcon = document.querySelector('#open-hand-icon');
@@ -30,8 +30,8 @@ const PanIntro = memo(function PanIntro() {
                 panIntroContainer.style.opacity = '0';
                 panIntroContainer.style.pointerEvents = 'none';
                 firstMouseMove = false;
+                
             }
-            console.log(`Mouse moved: ${e.clientX}, ${e.clientY}`);
         };
 
         const onMouseUp = () => {
