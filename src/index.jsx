@@ -9,9 +9,8 @@ import { store } from './store';
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
-
-
-
+function App() {
+  const [introPartDone, setIntroPartDone] = useState(false);
 
   return (
     <>
