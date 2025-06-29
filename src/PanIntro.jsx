@@ -30,7 +30,10 @@ const PanIntro = memo(function PanIntro({ introPartDone, setIntroPartDone }) {
                 panIntroContainer.style.opacity = '0';
                 panIntroContainer.style.pointerEvents = 'none';
                 firstMouseMove = false;
-                
+                if (introPartDone) {
+                    parentOverlay.style.opacity = '0';
+                }
+                setIntroPartDone(true);
             }
         };
 
@@ -55,7 +58,7 @@ const PanIntro = memo(function PanIntro({ introPartDone, setIntroPartDone }) {
             window.removeEventListener('mousemove', onMouseMove);
             window.removeEventListener('mouseup', onMouseUp);
         };
-    }, []);
+    }, [introPartDone, setIntroPartDone]);
 
     
     return <article id="pan-intro">
