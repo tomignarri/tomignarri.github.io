@@ -62,7 +62,7 @@ const PanIntro = memo(function PanIntro({ introPartDone, setIntroPartDone }) {
 
     
     return <article id="pan-intro">
-            <h1>Click,hold, and move to navigate</h1>
+            <h1>Click and drag to navigate</h1>
             <aside>
                 <FontAwesomeIcon id="grab-icon" icon={faHandBackFist} size="2xl" style={{color: "#ffffff",}} />
                 <FontAwesomeIcon id="open-hand-icon" icon={faHand} size="2xl" style={{color: "#ffffff",}} />
