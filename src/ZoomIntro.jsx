@@ -6,7 +6,7 @@ const ZoomIntro = memo(function ZoomIntro({ introPartDone, setIntroPartDone }) {
 
     useEffect(() => {
         const zoomIntroContainer = document.querySelector('#zoom-intro');
-        const parentOverlay = document.querySelector('.intro-container')
+        const parentOverlay = document.querySelector('.intro-container');
 
         let zoomAmountReached = false;
         let zoomAmount = 0;
@@ -17,6 +17,10 @@ const ZoomIntro = memo(function ZoomIntro({ introPartDone, setIntroPartDone }) {
                 zoomIntroContainer.style.opacity = '0';
                 zoomIntroContainer.style.pointerEvents = 'none';
                 zoomAmountReached = true;
+                if (introPartDone) {
+                    parentOverlay.style.opacity = '0';
+                }
+                setIntroPartDone(true);
             }
         }
 
@@ -26,7 +30,7 @@ const ZoomIntro = memo(function ZoomIntro({ introPartDone, setIntroPartDone }) {
             window.removeEventListener('wheel', onZoom);
         }
 
-    }, []);
+    }, [introPartDone, setIntroPartDone]);
 
     
     return <article id="zoom-intro">
