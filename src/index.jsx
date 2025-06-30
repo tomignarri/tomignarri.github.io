@@ -31,18 +31,21 @@ function App() {
         <PanIntro introPartDone={introPartDone} setIntroPartDone={setIntroPartDone} />
       </section>
 
-      <Canvas
-        className="r3f"
-        orthographic
-        camera={{
-          fov: 45,
-          zoom: store.startingZoom,
-          near: 0.1,
-          far: 200,
-          position: [0, 7, 0],
-        }}
-      >
-        <ambientLight intensity={0.5} />
+        <Canvas
+          className="r3f"
+          orthographic
+          shadows
+          dpr={[1, 2]} 
+          gl={{ antialias: false }}
+          camera={{
+            fov: 45,
+            zoom: store.startingZoom,
+            near: -10,
+            far: 1000,
+            position: [0, 9, 0],
+          }}
+        >
+        
         <Experience />
       </Canvas>
     </>

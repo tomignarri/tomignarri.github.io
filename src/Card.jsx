@@ -21,11 +21,14 @@ export default function Card({ title, techUsed, position, links, content })
 
         <mesh
             position={position}
+            castShadow
+            receiveShadow
         >
+
             <boxGeometry
                 args={[12, 1, 10]}
             />
-            <meshBasicMaterial color={store.cardColor} />
+            <meshStandardMaterial color={store.cardColor} />
             <Html 
                 position={[0, 0.6, 0]} 
                 transform
