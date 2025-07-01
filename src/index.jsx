@@ -42,7 +42,7 @@ function App() {
             zoom: store.startingZoom,
             near: -10,
             far: 1000,
-            position: [0, 9, 0],
+            position: [0, 13, 0],
           }}
         >
         

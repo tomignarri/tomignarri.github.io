@@ -7,7 +7,7 @@ import Object from './Object'
 
 export default function Objects() {
     const ref = useRef()
-    const particles = Array.from({ length: 100 }, () => ({
+    const particles = Array.from({ length: 50 }, () => ({
         factor: MathUtils.randInt(20, 100),
         speed: MathUtils.randFloat(0.01, 0.75),
         xFactor: MathUtils.randFloatSpread(40),
