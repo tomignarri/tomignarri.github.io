@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect } from 'react';
-import { useRapier, RigidBody, Physics } from '@react-three/rapier'
+import { useRapier, RigidBody, Physics, CuboidCollider } from '@react-three/rapier'
+import Objects from './Objects';
 
 const Background = () => {
     
@@ -15,25 +16,15 @@ const Background = () => {
         return null;
     }
 
-    return <>
-        <Physics>
+    return <Physics debug>
             <SetZGravity />
 
-            <RigidBody>
-                <mesh castShadow position={ [ - 2, 2, 0 ] }>
-                    <sphereGeometry />
-                    <meshStandardMaterial color="orange" />
-                </mesh>
-            </RigidBody>
+            <Objects />
 
-            <RigidBody type="fixed">
-                <mesh receiveShadow position-y={ - 1.25 }>
-                    <boxGeometry args={ [ 10, 0.5, 10 ] } />
-                    <meshStandardMaterial color="greenyellow" />
-                </mesh>
+            <RigidBody rotation={[-Math.PI / 2, 0, 0]} type="fixed">
+                <CuboidCollider args={[100, 0.5, 30]} position={[0, -15, 0]} />
             </RigidBody>
         </Physics>
-    </>
 };
 
 export default Background;
