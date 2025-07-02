@@ -16,7 +16,7 @@ export default function Objects() {
     }))
 
     //fix this
-    useFrame((state, delta) => void (ref.current.rotation.y = MathUtils.damp(ref.current.rotation.y, (-state.mouse.x * Math.PI) / 6, 2.75, delta)))
+    // useFrame((state, delta) => void (ref.current.rotation.y = MathUtils.damp(ref.current.rotation.y, (-state.mouse.x * Math.PI) / 6, 2.75, delta)))
     return (
       <Instances limit={particles.length} ref={ref} castShadow receiveShadow position={[0, 2.5, 0]}>
         <sphereGeometry args={[0.45, 64, 64]} />

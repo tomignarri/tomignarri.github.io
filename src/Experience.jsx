@@ -66,7 +66,7 @@ export default function Experience()
      
         <Environment preset="city" />
         
-        <PresentationControls
+        {/* <PresentationControls
             global
             rotation={ [ 0.13, 0.1, 0 ] }
             polar={ [ - 0.4, 0.2 ] }
@@ -80,7 +80,7 @@ export default function Experience()
             <N8AO aoRadius={6} intensity={2} color="red" />
             <TiltShift2 blur={0.1} />
         </EffectComposer>
-        <fog attach="fog" args={['blue', 20, -5]} />
+        <fog attach="fog" args={['blue', 20, -5]} /> */}
 
         <Card 
             title="Arcutis" 
