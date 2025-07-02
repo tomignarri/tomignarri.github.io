@@ -5,6 +5,7 @@ import Pan from './Pan.jsx'
 import ViewAll  from './ViewAll.jsx'
 import Card from './Card.jsx'
 import Objects from './Objects.jsx'
+import Background from './Background.jsx'
 import { store } from './store';
 import { useState } from 'react'
 import { EffectComposer, N8AO, TiltShift2 } from '@react-three/postprocessing'
@@ -81,6 +82,9 @@ export default function Experience()
             <TiltShift2 blur={0.1} />
         </EffectComposer>
         <fog attach="fog" args={['blue', 20, -5]} /> */}
+
+
+        <Background />
 
         <Card 
             title="Arcutis" 

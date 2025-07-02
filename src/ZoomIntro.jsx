@@ -15,7 +15,7 @@ const ZoomIntro = memo(function ZoomIntro({ introPartDone, setIntroPartDone }) {
 
         const onZoom = (e) => {
             zoomAmount += Math.abs(e.deltaY)
-            if(zoomAmount > 200 && !zoomIsReached) {
+            if(zoomAmount > 100 && !zoomIsReached) {
                 zoomIntroContainer.style.opacity = '0';
                 zoomIntroContainer.style.pointerEvents = 'none';
                 setZoomIsReached(true)
