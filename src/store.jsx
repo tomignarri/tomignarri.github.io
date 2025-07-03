@@ -1,6 +1,6 @@
 export const store = {
     maxZoom: 20,
-    minZoom: 250,
+    minZoom: 180,
     startingZoom: 27,
     cardDepth: 10,
 

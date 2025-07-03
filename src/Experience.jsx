@@ -66,23 +66,6 @@ export default function Experience()
 
      
         <Environment preset="city" />
-        
-        {/* <PresentationControls
-            global
-            rotation={ [ 0.13, 0.1, 0 ] }
-            polar={ [ - 0.4, 0.2 ] }
-            azimuth={ [ - 1, 0.75 ] }
-            config={ { mass: 2, tension: 400 } }
-            snap
-        >
-        </PresentationControls>
-        <Objects />
-        <EffectComposer disableNormalPass>
-            <N8AO aoRadius={6} intensity={2} color="red" />
-            <TiltShift2 blur={0.1} />
-        </EffectComposer>
-        <fog attach="fog" args={['blue', 20, -5]} /> */}
-
 
         <Background />
 

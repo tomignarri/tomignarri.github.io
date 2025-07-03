@@ -39,10 +39,10 @@ function App() {
           gl={{ antialias: false }}
           camera={{
             fov: 45,
-            zoom: store.startingZoom,
+            zoom: 20,
             near: -10,
             far: 1000,
-            position: [0, 13, 0],
+            position: [0, 10, 0],
           }}
         >
         
