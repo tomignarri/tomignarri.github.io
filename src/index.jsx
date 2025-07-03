@@ -1,16 +1,41 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import { Canvas } from '@react-three/fiber';
+import { OrbitControls } from '@react-three/drei';
 import './main.scss';
 import Experience from './Experience.jsx';
 import PanIntro from './PanIntro.jsx';
 import ZoomIntro from './ZoomIntro.jsx';
 import { store } from './store';
+import * as THREE from 'three';
+
 
 const root = ReactDOM.createRoot(document.querySelector('#root'));
 
+
+function Scene() {
+  return (
+    <>
+      {/* Axis Helper (X=Red, Y=Green, Z=Blue) */}
+      <primitive object={new THREE.AxesHelper(5)} />
+
+      {/* A simple cube */}
+      <mesh position={[0, 0.5, 0]}>
+        <boxGeometry args={[1, 1, 1]} />
+        <meshStandardMaterial color="orange" />
+      </mesh>
+
+      {/* Light */}
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[5, 5, 5]} />
+    </>
+  );
+}
+
 function App() {
   const [introPartDone, setIntroPartDone] = useState(false);
+
+
 
   return (
     <>
@@ -26,27 +51,40 @@ function App() {
         <button id="full-zoom-out">View all</button>
       </nav>
 
-      <section className="intro-container">
+      {/* <section className="intro-container">
         <ZoomIntro introPartDone={introPartDone} setIntroPartDone={setIntroPartDone} />
         <PanIntro introPartDone={introPartDone} setIntroPartDone={setIntroPartDone} />
-      </section>
+      </section> */}
 
         <Canvas
           className="r3f"
-          orthographic
           shadows
           dpr={[1, 2]} 
           gl={{ antialias: false }}
           camera={{
             fov: 45,
-            zoom: 20,
-            near: -10,
+            near: 0.1,
             far: 1000,
-            position: [0, 10, 0],
+            position: [0, 0, 10],
           }}
         >
         
+        <Scene />
+        
         <Experience />
+        <OrbitControls
+          enableZoom={true}
+          enablePan={true}
+          enableRotate={false}
+          zoomSpeed={0.5}
+          panSpeed={0.5}
+          target={[0, 0, 0]}
+          mouseButtons={{
+            LEFT: THREE.MOUSE.PAN,
+            MIDDLE: THREE.MOUSE.DOLLY,
+            RIGHT: null
+          }}
+        />
       </Canvas>
     </>
   );

@@ -25,13 +25,13 @@ export default function Card({ title, techUsed, position, links, content })
         >
 
             <boxGeometry
-                args={[12, 1, 10]}
+                args={[12, 10, 1]}
             />
             <meshStandardMaterial color={store.cardColor} />
             <Html 
-                position={[0, 0.6, 0]} 
+                position={[0, 0, 0.6]} 
                 transform
-                rotation={[-Math.PI / 2, 0, 0]}
+                rotation={[0, 0, 0]}
             >
                 <section class="card">
                     <h1>{title}</h1>

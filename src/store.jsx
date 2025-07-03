@@ -2,7 +2,7 @@ export const store = {
     maxZoom: 20,
     minZoom: 180,
     startingZoom: 27,
-    cardDepth: 10,
+    cardDepth: 2,
 
     // colors
     expBackgroundColor: '#ffffff',

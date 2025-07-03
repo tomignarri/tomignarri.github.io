@@ -39,20 +39,19 @@ export default function Experience()
     topNavButton.addEventListener('touch', toggleTopNav);
     
     const dtPositions = {
-        arcutis: [-15, store.cardDepth, -6],
-        csl: [0, store.cardDepth, -6],
-        neuro: [15, store.cardDepth, -6],
-        cooper: [-8, store.cardDepth, 6],
-        iper: [8, store.cardDepth, 6]
+        arcutis: [-15, -6, store.cardDepth],
+        csl: [0, -6, store.cardDepth],
+        neuro: [15, -6, store.cardDepth],
+        cooper: [-8, 6, store.cardDepth],
+        iper: [8, 6, store.cardDepth]
     };
-
     
     const mbPositions = {
-        arcutis: [0, store.cardDepth, -8],
-        csl: [0, store.cardDepth, 0],
-        neuro: [0, store.cardDepth, 8],
-        cooper: [0, store.cardDepth, 16],
-        iper: [0, store.cardDepth, 24]
+        arcutis: [0, -8, store.cardDepth],
+        csl: [0, 0, store.cardDepth],
+        neuro: [0, 8, store.cardDepth],
+        cooper: [0, 16, store.cardDepth],
+        iper: [0, 24, store.cardDepth]
     };
 
 
@@ -104,9 +103,9 @@ export default function Experience()
             links={ iperbot.links }
             content={ iperbot.content}
         />
-        <Zoom />
-        <Pan />
-        <ViewAll />
+        {/* <Zoom />
+        <Pan /> */}
+        {/* <ViewAll /> */}
       
 
     </>
