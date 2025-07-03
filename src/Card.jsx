@@ -18,7 +18,6 @@ export default function Card({ title, techUsed, position, links, content })
 
 
     return <>
-
         <mesh
             position={position}
             castShadow

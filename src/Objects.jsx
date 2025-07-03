@@ -1,15 +1,28 @@
-import { Instances, Instance } from '@react-three/drei'
-import Object from './Object'
-
+import { useState, useRef } from "react";
+import { useFrame } from "@react-three/fiber";
+import Object from "./Object";
 
 export default function Objects() {
+  const [objects, setObjects] = useState([]);
+  const frameCount = useRef(0);
+  const xPosition = Math.floor(Math.random() * (28 - -28) + -28);
+  const yPosition = Math.floor(Math.random() * (2 - -2) + -2);
 
-    // over time create new object
-    const objectsArr = Array.from({ length: 10 });
+  const position = [xPosition, 0, 0];
 
-    return <>
-        {objectsArr.map((_, i) => (
-          <Object key={i} index={i} />
-        ))}
+  useFrame(() => {
+    frameCount.current++;
+
+    if (frameCount.current % 40 === 0) {
+      setObjects((prev) => [...prev, prev.length]);
+    }
+  });
+
+  return (
+    <>
+      {objects.map((i) => (
+        <Object key={i} index={i} position={position} />
+      ))}
     </>
-};
+  );
+}
