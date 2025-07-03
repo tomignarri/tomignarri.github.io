@@ -19,7 +19,7 @@ const Background = () => {
         return null;
     }
 
-    return <Physics debug>
+    return <Physics>
             <SetZGravity />
 
             <Objects />
