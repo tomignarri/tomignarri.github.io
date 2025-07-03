@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-import { Canvas } from '@react-three/fiber';
-import { OrbitControls } from '@react-three/drei';
+import { Canvas, useThree } from '@react-three/fiber';
 import './main.scss';
 import Experience from './Experience.jsx';
 import PanIntro from './PanIntro.jsx';
@@ -37,6 +36,9 @@ function App() {
 
 
 
+
+
+
   return (
     <>
       <nav id="top-nav">
@@ -65,26 +67,14 @@ function App() {
             fov: 45,
             near: 0.1,
             far: 1000,
-            position: [0, 0, 10],
+            position: [0, 0, 48],
           }}
         >
         
-        <Scene />
+        {/* <Scene /> */}
         
         <Experience />
-        <OrbitControls
-          enableZoom={true}
-          enablePan={true}
-          enableRotate={false}
-          zoomSpeed={0.5}
-          panSpeed={0.5}
-          target={[0, 0, 0]}
-          mouseButtons={{
-            LEFT: THREE.MOUSE.PAN,
-            MIDDLE: THREE.MOUSE.DOLLY,
-            RIGHT: null
-          }}
-        />
+
       </Canvas>
     </>
   );

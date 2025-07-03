@@ -9,7 +9,7 @@ export default function Objects() {
   useFrame(() => {
     frameCount.current++;
 
-    if (frameCount.current % 40 === 0) {
+    if ((frameCount.current % 40 === 0) && frameCount.current < 500) {
       setObjects((prev) => [...prev, prev.length]);
     }
   });
