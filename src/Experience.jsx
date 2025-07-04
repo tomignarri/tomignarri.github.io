@@ -22,18 +22,34 @@ export default function Experience() {
 
   const clamp = () => {
     if (isPointInPyramid(camera.position)) {
+      centerOnZoom();
       lastValidPosition.current.copy(camera.position);
       lastValidTarget.current.copy(controls.current.target);
     } else {
       camera.position.copy(lastValidPosition.current);
       controls.current.target.copy(lastValidTarget.current);
       controls.current.update();
+    } 
+  };
+
+  const centerOnZoom = () => {
+    const currentZ = camera.position.z;
+    const previousZ = lastValidPosition.current.z;
+  
+    if (currentZ > previousZ) {
+      const damping = 0.05;
+  
+      camera.position.x = THREE.MathUtils.lerp(camera.position.x, 0, damping);
+      camera.position.y = THREE.MathUtils.lerp(camera.position.y, 0, damping);
+  
+      controls.current.target.x = THREE.MathUtils.lerp(controls.current.target.x, 0, damping);
+      controls.current.target.y = THREE.MathUtils.lerp(controls.current.target.y, 0, damping);
+  
+      lastValidPosition.current.copy(camera.position);
+      lastValidTarget.current.copy(controls.current.target);
+
+      controls.current.update();
     }
-
-
-    
-
-    // if current z value it larger than previous take prevoius coordinate and move it one step closer to zero per change event
   };
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
