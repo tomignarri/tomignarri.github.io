@@ -33,7 +33,10 @@ function Scene() {
 function App() {
   const [introPartDone, setIntroPartDone] = useState(false);
 
-  const { iperbot, csl, arcutis, neurocrine, cooper } = store;
+  const {csl, neurocrine, arcutis, cooper, iperbot} = store;
+
+  const clients = [csl, neurocrine, arcutis, cooper, iperbot];
+
 
   return (
     <>
@@ -46,18 +49,15 @@ function App() {
       </nav>
 
       <div id="all-cards-container">
-        <Card
-          title="ARCUTIS"
-          techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
-          content={arcutis.content}
-          links={arcutis.links}
-        />
-        <Card
-          title="Arcutis"
-          techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
-          content={arcutis.content}
-          links={arcutis.links}
-        />
+        {clients.map((client, i) => (
+          <Card
+            key={i}
+            title={client.title}
+            techUsed={client.techUsed}
+            content={client.content}
+            links={client.links}
+          />
+        ))}
       </div>
 
       {/* <nav id="bottom-nav">
