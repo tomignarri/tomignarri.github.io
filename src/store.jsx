@@ -12,7 +12,6 @@ export const store = {
     iperbot: {
         links: <>
             <a href="https://iperdesign.com/iperbot-game/" target='_blank'>Play the game</a>
-            <br />
             <a href="https://bitbucket.org/tomignarri/iperbot/src/master/" target="_blank">Bitbucket</a>
         </>,
         content: <>
@@ -59,7 +58,6 @@ export const store = {
     arcutis: {
         links: <>
             <a href="https://pharmawards.com/2024-arcutis-dtp-cream-that-can/#website" target='_blank'>View campaign</a>
-            <br />
             <a href="https://www.zoryve.com/save-with-zoryve-direct" target='_blank'>View the website</a>
         </>,
         content: <>
@@ -90,7 +88,6 @@ export const store = {
     neurocrine: {
         links: <>
             <a href="https://www.ingrezza.com/tardive-dyskinesia" target='_blank'>View Ingrezza</a>
-            <br />
             <a href="https://www.morethanhd.com/" target='_blank'>View More Than HD</a>
         </>,
         content: <>

@@ -14,15 +14,14 @@ export default function Card({ title, techUsed, links, content }) {
 
   return (
     <>
-      <div>
-        <section class="card">
-          <h1>{title}</h1>
-          <h3>{techUsed}</h3>
-          <aside>{links}</aside>
-          {content}
-          <div className="card-hover-container">
-            <h1></h1>
-          </div>
+      <div className="card-container">
+        <section className="card">
+          <section className="card-content">
+            <h1>{title}</h1>
+            <h3>{techUsed}</h3>
+            <aside>{links}</aside>
+            {content}
+          </section>
         </section>
       </div>
     </>
