@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import { Canvas, useThree } from '@react-three/fiber';
 import './main.scss';
 import Experience from './Experience.jsx';
+import Card from "./Card.jsx";
 import PanIntro from './PanIntro.jsx';
 import ZoomIntro from './ZoomIntro.jsx';
 import { store } from './store';
@@ -34,6 +35,7 @@ function Scene() {
 function App() {
   const [introPartDone, setIntroPartDone] = useState(false);
 
+  const { iperbot, csl, arcutis, neurocrine, cooper } = store;
 
 
 
@@ -42,16 +44,26 @@ function App() {
   return (
     <>
       <nav id="top-nav">
-        <button>About me.</button>
+        <button>About me</button>
         <article>
-          <h1>Hello</h1>
-          <p>My name is Tom Ignarri. I'm a developer based in Philadelphia, PA.</p>
+            <h1>Hello</h1>
+            <p>My name is Tom Ignarri. I'm a developer based in Philadelphia, PA.</p>
         </article>
       </nav>
 
-      <nav id="bottom-nav">
+
+      <Card
+        title="Arcutis"
+        techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
+        content={arcutis.content}
+        links={arcutis.links}
+      />
+
+
+
+      {/* <nav id="bottom-nav">
         <button id="full-zoom-out">View all</button>
-      </nav>
+      </nav> */}
 
       {/* <section className="intro-container">
         <ZoomIntro introPartDone={introPartDone} setIntroPartDone={setIntroPartDone} />

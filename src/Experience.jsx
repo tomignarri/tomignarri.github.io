@@ -3,7 +3,7 @@ import { MathUtils } from "three";
 import Zoom from "./Zoom.jsx";
 import Pan from "./Pan.jsx";
 import ViewAll from "./ViewAll.jsx";
-import Card from "./Card.jsx";
+
 import Objects from "./Objects.jsx";
 import Background from "./Background.jsx";
 import { store } from "./store";
@@ -54,7 +54,7 @@ export default function Experience() {
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
-  const { iperbot, csl, arcutis, neurocrine, cooper } = store;
+  
 
   const topNavButton = document.querySelector("#top-nav button");
   const topNav = document.querySelector("#top-nav");
@@ -63,11 +63,9 @@ export default function Experience() {
 
   const toggleTopNav = () => {
     if (!topNavOpen) {
-      topNav.style.height = "200px";
       aboutContent.style.display = "block";
       topNavOpen = true;
     } else {
-      topNav.style.height = "32px";
       aboutContent.style.display = "none";
       topNavOpen = false;
     }
@@ -79,9 +77,9 @@ export default function Experience() {
   const dtPositions = {
     arcutis: [-15, -6, store.cardDepth],
     csl: [0, -6, store.cardDepth],
-    neuro: [15, -6, store.cardDepth],
-    cooper: [-8, 6, store.cardDepth],
-    iper: [8, 6, store.cardDepth],
+    neuro: [0, 6, store.cardDepth],
+    cooper: [-15, 6, store.cardDepth],
+    iper: [15, 6, store.cardDepth],
   };
 
   const mbPositions = {
@@ -122,41 +120,7 @@ export default function Experience() {
         onChange={clamp}
       />
 
-      <Card
-        title="Arcutis"
-        position={myCardPositions.arcutis}
-        techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
-        content={arcutis.content}
-        links={arcutis.links}
-      />
-
-      <Card
-        title="Neurocrine"
-        position={myCardPositions.neuro}
-        techUsed="Javascript, HTML, SCSS, ASP.NET, C#, React, Node.js"
-        links={neurocrine.links}
-        content={neurocrine.content}
-      />
-      <Card
-        title="Cooper Surgical"
-        position={myCardPositions.cooper}
-        techUsed="Javascript, HTML, SCSS, Wordpress"
-        content={cooper.content}
-      />
-      <Card
-        title="CSL Behring"
-        position={myCardPositions.csl}
-        techUsed="Javascript, HTML, SCSS, ASP.NET, C#, Greensock"
-        links={csl.links}
-        content={csl.content}
-      />
-      <Card
-        title="Iperbot"
-        position={myCardPositions.iper}
-        techUsed="Unity, C#"
-        links={iperbot.links}
-        content={iperbot.content}
-      />
+     
       {/* <Zoom />
         <Pan /> */}
       {/* <ViewAll /> */}

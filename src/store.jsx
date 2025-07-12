@@ -5,8 +5,8 @@ export const store = {
     cardDepth: 3,
 
     // colors
-    expBackgroundColor: '#ffffff',
-    cardColor: '#bababa',
+    expBackgroundColor: '#000000',
+    cardColor: '#D9D9D9',
 
     // projects
     iperbot: {
