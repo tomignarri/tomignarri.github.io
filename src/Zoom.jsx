@@ -9,11 +9,10 @@ export default function Zoom()
 
     useEffect(() => {
         const handleScroll = (e) => {
-            camera.zoom += e.deltaY * -0.1
-            camera.zoom = Math.max(store.maxZoom, Math.min(store.minZoom, camera.zoom))
+            camera.position.y += e.deltaY * -0.1
+            camera.position.y = Math.max(store.maxYCamera, Math.min(store.minYCamera, camera.position.y))
             camera.updateProjectionMatrix()
         }
-
 
         window.addEventListener('wheel', handleScroll)
         

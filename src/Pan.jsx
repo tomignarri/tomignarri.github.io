@@ -1,8 +1,6 @@
 import { useEffect } from 'react'
 import { useThree } from '@react-three/fiber'
 
-// get states of pan position
-
 export default function Pan()
 {
     const { camera } = useThree();
@@ -15,7 +13,7 @@ export default function Pan()
             y: undefined
         };
 
-        const getXY = (e) => {
+        const getCursorPosition = (e) => {
             if (e.touches && e.touches.length > 0) {
                 return {
                     x: e.touches[0].clientX / 100,
@@ -33,10 +31,13 @@ export default function Pan()
         const handleDrag = (e) => {
             if (!isDragging) return;
 
-            const { x, y } = getXY(e);
+            const { x, y } = getCursorPosition(e);
+
+            // How far did cursor move from one frame to the next
             const deltaX = x - prevFrame.x;
             const deltaY = y - prevFrame.y;
-        
+            
+            
             camera.position.x -= deltaX;
             camera.position.z -= deltaY;
         
@@ -45,7 +46,7 @@ export default function Pan()
         }
 
         const startPan = (e) => {
-            const { x, y } = getXY(e);
+            const { x, y } = getCursorPosition(e);
             prevFrame.x = x;
             prevFrame.y = y;
             isDragging = true;
