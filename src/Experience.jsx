@@ -56,23 +56,23 @@ export default function Experience() {
 
   
 
-  const topNavButton = document.querySelector("#top-nav button");
-  const topNav = document.querySelector("#top-nav");
-  const aboutContent = document.querySelector("#top-nav article");
-  let topNavOpen = false;
+  // const topNavButton = document.querySelector("#top-nav button");
+  // const topNav = document.querySelector("#top-nav");
+  // const aboutContent = document.querySelector("#top-nav article");
+  // let topNavOpen = false;
 
-  const toggleTopNav = () => {
-    if (!topNavOpen) {
-      aboutContent.style.display = "block";
-      topNavOpen = true;
-    } else {
-      aboutContent.style.display = "none";
-      topNavOpen = false;
-    }
-  };
+  // const toggleTopNav = () => {
+  //   if (!topNavOpen) {
+  //     aboutContent.style.display = "block";
+  //     topNavOpen = true;
+  //   } else {
+  //     aboutContent.style.display = "none";
+  //     topNavOpen = false;
+  //   }
+  // };
 
-  topNavButton.addEventListener("click", toggleTopNav);
-  topNavButton.addEventListener("touch", toggleTopNav);
+  // topNavButton.addEventListener("click", toggleTopNav);
+  // topNavButton.addEventListener("touch", toggleTopNav);
 
   const dtPositions = {
     arcutis: [-15, -6, store.cardDepth],

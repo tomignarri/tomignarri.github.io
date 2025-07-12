@@ -44,20 +44,20 @@ function App() {
   return (
     <>
       <nav id="top-nav">
-        <button>About me</button>
-        <article>
-            <h1>Hello</h1>
-            <p>My name is Tom Ignarri. I'm a developer based in Philadelphia, PA.</p>
-        </article>
+        <button>Neurocrine</button>
+        <button>CSL Behring</button>
+        <button>Arcutis</button>
+        <button>Cooper</button>
+        <button>Iperbot</button>
       </nav>
 
 
-      <Card
+      {/* <Card
         title="Arcutis"
         techUsed="Javascript, HTML, SCSS, Drupal, React, PHP"
         content={arcutis.content}
         links={arcutis.links}
-      />
+      /> */}
 
 
 
