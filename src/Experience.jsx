@@ -104,20 +104,10 @@ export default function Experience() {
 
       <OrbitControls
         ref={controls}
-        enableZoom={true}
-        enablePan={true}
-        enableRotate={false}
+
         zoomSpeed={0.7}
         panSpeed={0.7}
         target={[0, 0, 0]}
-        minDistance={10}
-        maxDistance={48}
-        mouseButtons={{
-          LEFT: THREE.MOUSE.PAN,
-          MIDDLE: THREE.MOUSE.DOLLY,
-          RIGHT: null,
-        }}
-        onChange={clamp}
       />
 
      
