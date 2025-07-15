@@ -41,14 +41,15 @@ export const store = {
               Working closely with my colleagues, we played a key role in the digital execution of an 
               educational initiative showcasing advances in gene therapy for Hemophilia&nbsp;B&nbsp;treatment.
             </p>
-            <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-1.mp4" type="video/mp4" /></video>
-          </article>
-          <article>
             <p>
               My role was to spearhead the development of a website for patients. 
               Our designers created a variety of interactive elements and animations, which I implemented using the Greensock library.
               Pictured on the right is a form that communicated with an api built in ASP.NET.
             </p>
+            
+          </article>
+          <article>
+            <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-1.mp4" type="video/mp4" /></video>
             <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-2.mp4" type="video/mp4" /></video>
           </article>
         </>

@@ -89,22 +89,22 @@ h1, h2, h3, p, button, a {
 
 
 h1 {
-    font-size: 46px;
+    font-size: 7.5rem;
     font-weight: 700;
-    line-height: 28px;
+    line-height: 6rem;
     color: white;
 }
 
 h2 {
-    font-size: large;
-    font-weight: 500;
+    font-size: 4rem;
+    font-weight: $semi-bold;
+    color: white;
     font-size: 20px;
 }
 
 h3 {
     font-weight: 300;
     font-size: 12px;
-    font-style: italic;
 }
 
 p {
@@ -140,42 +140,31 @@ button {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
-        display: flex;
-        align-items: center;
         .card {
-            width: 100%;
-            height: 450px;
             box-sizing: border-box;
-            margin-left: 18%;
             position: relative;
-
             .card-content {
-                max-width: 780px;
-                h1 {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    transform: rotate(90deg);
-                    top: 86px;
-                    left: -84px;
+                
+                max-width: 1200px;
+                position: relative;
+
+                h2 {
+                    margin-bottom: 8.125rem;
                 }
-    
-                h3 {
-                    display: none;
-                }
+   
             
                 /* Link area */
                 aside {
                     position: absolute;
-                    bottom: 0;
-                    left: 0;
+                    top: 0;
+                    right: 0;
                     box-sizing: border-box;
                     a {
                         background-color: $blue;
                         color: $white;
                         display: inline-block;
-                        height: 27px;
-                        width: 160px;
+                        height: 40px;
+                        width: 220px;
                         margin-right: 4px;
                         text-align: center;
                         line-height: 26px;
@@ -191,25 +180,29 @@ button {
                     display: flex;
                     flex-direction: row;
                     align-items: start;
-                    margin-left: 130px;
+                    gap: 1rem;
+                    max-width: 1200px;
+                    width: 100%;
                     h3 {
                         margin-top: $small-spacing;
                         margin-bottom: 18px;
                     }
                     img {
-                        max-width: 310px;
-                        width: 100%;
-                        height: auto;
                         user-drag: none;
                         -webkit-user-drag: none; /* For WebKit browsers like Chrome and Safari */
                         -moz-user-drag: none;    /* For Firefox */
                         -ms-user-drag: none;     /* For Internet Explorer */
                     }
-                    video {
-                        max-width: 310px;
+                    img, video {
+                        flex: 1;
+                        min-width: 0;
+                        max-width: 100%;
+                        height: auto;         
+                        object-fit: cover; 
+                        display: block;
                     }
                     p {
-                        padding-right: $standard-spacing;
+                        flex: 1;
                         font-size: 12px;
                     }
                 }
@@ -220,68 +213,3 @@ button {
         }
     }
 }
-
-// #zoom-intro {
-//     aside {
-            
-//     }
-//     aside:hover {
-//         background-color: #2e2e2e;
-//     }
-// }
-
-#pan-intro {
-    
-}
-
-
-// .intro-container {
-//     width: 100%;
-//     height: 100%;
-//     background-color: rgba(206, 206, 206, 0.5);
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     z-index: 1;
-//     transition: opacity 1.5s ease;
-//     article {
-//         padding: $standard-spacing;
-//         box-sizing: border-box;
-//         max-width: 357px;
-//         max-height: 300px;
-//         border-radius: 30px;
-//         background-color: #787878;
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         transition: opacity 1.5s ease;
-//         margin: 0 15px;
-//         h1 {
-//             color: $white;
-//             margin-bottom: $standard-spacing;
-//         }
-//         aside {
-//             border-radius: 100px;
-//             background-color: #2e2e2e;
-//             transition: background-color 0.1s ease;
-//             width: 125px;
-//             height: 125px;
-//             display: flex;
-//             justify-content: center;
-//             align-items: center;
-
-//             #grab-icon {
-//                 display: none;
-//             }
-//         }
-//         aside:hover {
-//             background-color: $white;
-//         }
-
-//     }
-// }
-
-
