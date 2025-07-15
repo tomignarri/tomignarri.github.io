@@ -75,7 +75,7 @@ function App() {
         dpr={[1, 2]}
         gl={{ antialias: false }}
         camera={{
-          fov: 45,
+          fov: 30,
           near: 0.1,
           far: 1000,
           position: [0, 0, 48],

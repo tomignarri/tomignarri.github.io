@@ -5,6 +5,7 @@ import Pan from "./Pan.jsx";
 import ViewAll from "./ViewAll.jsx";
 
 import Objects from "./Objects.jsx";
+import Light from "./Light.jsx"
 import Background from "./Background.jsx";
 import { store } from "./store";
 import { useState, useRef } from "react";
@@ -29,22 +30,30 @@ export default function Experience() {
       camera.position.copy(lastValidPosition.current);
       controls.current.target.copy(lastValidTarget.current);
       controls.current.update();
-    } 
+    }
   };
 
   const centerOnZoom = () => {
     const currentZ = camera.position.z;
     const previousZ = lastValidPosition.current.z;
-  
+
     if (currentZ > previousZ) {
       const damping = 0.05;
-  
+
       camera.position.x = THREE.MathUtils.lerp(camera.position.x, 0, damping);
       camera.position.y = THREE.MathUtils.lerp(camera.position.y, 0, damping);
-  
-      controls.current.target.x = THREE.MathUtils.lerp(controls.current.target.x, 0, damping);
-      controls.current.target.y = THREE.MathUtils.lerp(controls.current.target.y, 0, damping);
-  
+
+      controls.current.target.x = THREE.MathUtils.lerp(
+        controls.current.target.x,
+        0,
+        damping
+      );
+      controls.current.target.y = THREE.MathUtils.lerp(
+        controls.current.target.y,
+        0,
+        damping
+      );
+
       lastValidPosition.current.copy(camera.position);
       lastValidTarget.current.copy(controls.current.target);
 
@@ -53,8 +62,6 @@ export default function Experience() {
   };
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-
-  
 
   // const topNavButton = document.querySelector("#top-nav button");
   // const topNav = document.querySelector("#top-nav");
@@ -96,21 +103,23 @@ export default function Experience() {
     <>
       <color args={[store.expBackgroundColor]} attach="background" />
 
-      <Environment preset="city" />
-
       <Background />
 
-      <ambientLight intensity={1.5} />
+      {/* Point light: like a bulb */}
+      <pointLight position={[0, 0, 1]} intensity={1} color="white" />
 
       <OrbitControls
         ref={controls}
-
         zoomSpeed={0.7}
         panSpeed={0.7}
         target={[0, 0, 0]}
       />
 
-     
+      <mesh>
+        <planeGeometry args={[100, 100]}/>
+        <meshStandardMaterial color="gray" side={2} />
+      </mesh>
+
       {/* <Zoom />
         <Pan /> */}
       {/* <ViewAll /> */}

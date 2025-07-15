@@ -1,23 +1,28 @@
-import { useState, useEffect, useRef } from "react";
-import { useFrame } from "@react-three/fiber";
+import { useEffect, useMemo } from "react";
 import Object from "./Object";
 
 export default function Objects() {
-  const [objects, setObjects] = useState([]);
-  const frameCount = useRef(0);
-
-  useFrame(() => {
-    frameCount.current++;
-
-    if ((frameCount.current % 40 === 0) && frameCount.current < 500) {
-      setObjects((prev) => [...prev, prev.length]);
+  const positions = useMemo(() => {
+    const pos = [];
+    for (let x = 0; x < 40; x++) {
+      for (let y = 0; y < 40; y++) {
+        pos.push([x, y]);
+        if (!(x === 0 && y === 0)) {
+          pos.push([-x, y]);
+          pos.push([x, -y]);
+          pos.push([-x, -y]);
+        }
+      }
     }
-  });
+
+    return pos;
+  }, []);
+
 
   return (
     <>
-      {objects.map((i) => (
-        <Object key={i} />
+      {positions.map((position, i) => (
+        <Object key={i} position={position} />
       ))}
     </>
   );
