@@ -1,6 +1,6 @@
-import React, { useRef, useEffect } from 'react';
-import { useFrame, useThree } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useRef, useEffect } from "react";
+import { useFrame, useThree } from "@react-three/fiber";
+import * as THREE from "three";
 
 const Light = () => {
   const lightRef = useRef();
@@ -14,8 +14,8 @@ const Light = () => {
       mouse.current.y = -(event.clientY / size.height) * 2 + 1;
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
-    return () => window.removeEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
+    return () => window.removeEventListener("mousemove", handleMouseMove);
   }, [size]);
 
   useFrame(() => {
@@ -31,12 +31,16 @@ const Light = () => {
   });
 
   return (
-    <pointLight
-      ref={lightRef}
-      position={[0, 0, 1]}
-      intensity={1}
-      color="white"
-    />
+    <>
+      <pointLight
+        ref={lightRef}
+        position={[0, 0, 2]}
+        intensity={1}
+        castShadow
+        color="white"
+      />
+      <ambientLight intensity={0} color="white" />
+    </>
   );
 };
 

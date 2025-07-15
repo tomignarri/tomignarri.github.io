@@ -106,22 +106,21 @@ export default function Experience() {
       <Objects />
 
       <Light />
+      
 
-      <OrbitControls
+      {/* <OrbitControls
         ref={controls}
         zoomSpeed={0.7}
         panSpeed={0.7}
         target={[0, 0, 0]}
-      />
+      /> */}
 
-      <mesh>
+      <mesh receiveShadow>
         <planeGeometry args={[100, 100]}/>
-        <meshStandardMaterial color="gray" side={2} />
+        <meshStandardMaterial color="white" side={2} />
       </mesh>
 
-      {/* <Zoom />
-        <Pan /> */}
-      {/* <ViewAll /> */}
+
     </>
   );
 }

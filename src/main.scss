@@ -17,6 +17,7 @@ $accent: #e28743;
 $yellow: #C1A837;
 $blue: #4899c9;
 
+$blue: #2089DF;
 $green-1: #889B6E;
 $green-light: #DEDBC8;
 $white: #FFFFFF;
@@ -51,7 +52,7 @@ $black: 900;
 
 
 nav {
-    background-color: $green-1;
+    background-color: $blue;
     transition: height 0.1s ease;
     position: absolute;
     box-sizing: border-box;
@@ -74,7 +75,7 @@ nav {
     }
     button:hover {
         background-color: $white;
-        color: $green-1;
+        color: $blue;
     }
 }
 
@@ -123,7 +124,6 @@ button {
 }
 
 #all-cards-container {
-    display: none;
     position: absolute;
     top: 0;
     left: 0;
@@ -131,7 +131,7 @@ button {
     width: 100%;
     z-index: 1;
     overflow: scroll;
-    background-color: $gray;
+    background-color: #ffffff;
     margin-top: clamp(1rem, 20vw, 10rem);
     margin-left: clamp(1rem, 20vw, 10rem);
     .card-container {
@@ -169,7 +169,7 @@ button {
                     left: 0;
                     box-sizing: border-box;
                     a {
-                        background-color: $green-1;
+                        background-color: $blue;
                         color: $white;
                         display: inline-block;
                         height: 27px;
@@ -180,7 +180,7 @@ button {
                     }
                     a:hover {
                         background-color: $white;
-                        color: $green-1;
+                        color: $blue;
                     }
                 }
             
