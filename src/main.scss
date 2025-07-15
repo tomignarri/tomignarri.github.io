@@ -92,6 +92,7 @@ h1 {
     font-size: 46px;
     font-weight: 700;
     line-height: 28px;
+    color: white;
 }
 
 h2 {
@@ -111,6 +112,7 @@ p {
     font-weight: $normal;
     font-size: 12px;
     line-height: 17px;
+    color: white;
 }
 
 a {
@@ -131,7 +133,7 @@ button {
     width: 100%;
     z-index: 1;
     overflow: scroll;
-    background-color: #ffffff;
+    background-color: #000000;
     margin-top: clamp(1rem, 20vw, 10rem);
     margin-left: clamp(1rem, 20vw, 10rem);
     .card-container {

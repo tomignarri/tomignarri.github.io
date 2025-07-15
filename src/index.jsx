@@ -78,10 +78,10 @@ function App() {
         gl={{ antialias: false }}
         orthographic
         camera={{
-          zoom: 50,
+          zoom: 5,
           near: 0.1,
           far: 1000,
-          position: [0, 0, 10],
+          position: [0, 0, 20],
         }}
       >
         {/* <Scene /> */}

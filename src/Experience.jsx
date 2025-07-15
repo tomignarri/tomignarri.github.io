@@ -103,10 +103,12 @@ export default function Experience() {
     <>
       <color args={[store.expBackgroundColor]} attach="background" />
 
-      <Objects />
+      {/* <Objects /> */}
 
       <Light />
-      
+
+      <Background />
+
 
       {/* <OrbitControls
         ref={controls}
@@ -115,10 +117,12 @@ export default function Experience() {
         target={[0, 0, 0]}
       /> */}
 
-      <mesh receiveShadow>
+      {/* <mesh receiveShadow>
         <planeGeometry args={[100, 100]}/>
         <meshStandardMaterial color="white" side={2} />
-      </mesh>
+      </mesh> */}
+
+
 
 
     </>

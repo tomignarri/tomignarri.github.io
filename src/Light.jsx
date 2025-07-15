@@ -8,8 +8,8 @@ const Light = () => {
   const mouse = useRef(new THREE.Vector2());
 
   useEffect(() => {
+
     const handleMouseMove = (event) => {
-      // Convert screen coords to NDC (-1 to 1)
       mouse.current.x = (event.clientX / size.width) * 2 - 1;
       mouse.current.y = -(event.clientY / size.height) * 2 + 1;
     };
@@ -20,13 +20,12 @@ const Light = () => {
 
   useFrame(() => {
     if (lightRef.current) {
-      const vector = new THREE.Vector3(mouse.current.x, mouse.current.y, 0.5);
-      vector.unproject(camera); // Convert NDC to world position
+      const vector = new THREE.Vector3(mouse.current.x, mouse.current.y, 5);
+      vector.unproject(camera);
 
-      // Optional: lock to XY plane by setting z = fixed value
-      vector.z = 1;
+      vector.z = 5;
 
-      lightRef.current.position.lerp(vector, 0.2); // Smooth follow
+      lightRef.current.position.lerp(vector, 0.2);
     }
   });
 
@@ -34,12 +33,13 @@ const Light = () => {
     <>
       <pointLight
         ref={lightRef}
-        position={[0, 0, 2]}
-        intensity={1}
+        position={[0, 0, 5]}
+        intensity={10}
         castShadow
+        decay={1}
         color="white"
       />
-      <ambientLight intensity={0} color="white" />
+      <ambientLight intensity={0.1} color="white" />
     </>
   );
 };
