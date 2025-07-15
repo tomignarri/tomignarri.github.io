@@ -23,7 +23,7 @@ const Background = () => {
     return <Physics>
             <SetZGravity />
 
-            <Objects />
+            
 
             {/* floor */}
             <RigidBody type="fixed">

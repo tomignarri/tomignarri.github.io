@@ -103,10 +103,9 @@ export default function Experience() {
     <>
       <color args={[store.expBackgroundColor]} attach="background" />
 
-      <Background />
+      <Objects />
 
-      {/* Point light: like a bulb */}
-      <pointLight position={[0, 0, 1]} intensity={1} color="white" />
+      <Light />
 
       <OrbitControls
         ref={controls}

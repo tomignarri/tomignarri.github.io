@@ -37,6 +37,8 @@ function App() {
 
   const clients = [csl, neurocrine, arcutis, cooper, iperbot];
 
+  const viewSize = 10;
+  const aspect = window.innerWidth / window.innerHeight;
 
   return (
     <>
@@ -74,11 +76,12 @@ function App() {
         shadows
         dpr={[1, 2]}
         gl={{ antialias: false }}
+        orthographic
         camera={{
-          fov: 30,
+          zoom: 50,
           near: 0.1,
           far: 1000,
-          position: [0, 0, 48],
+          position: [0, 0, 10],
         }}
       >
         {/* <Scene /> */}
