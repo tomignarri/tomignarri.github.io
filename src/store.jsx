@@ -15,14 +15,16 @@ export const store = {
           <article>
             <p>IperBot is an internal project developed by several interns and designers at 
               Iperdesign. This was my first project in Unity. It was a deep dive into a very 
-              unfamiliar API which made for a challenging experience.</p>
-            <img alt="iperbot-img-2" draggable="false" src="gifs/iperbot_2.gif" />
-          </article>
-          <article>
-            <p>Testing the game with users 
+              unfamiliar API which made for a challenging experience.
+              </p>
+              <p>Testing the game with users 
               was a major part of this project as well. It was important that the difficulty was 
               appropriate in such a way that experienced gamers could have fun and less experienced 
-              gamers would not be overwhelmed.</p>
+              gamers would not be overwhelmed.
+              </p>
+          </article>
+          <article>
+            <img alt="iperbot-img-2" draggable="false" src="gifs/iperbot_2.gif" />
             <img alt="iperbot-img-1" draggable="false" src="gifs/iperbot_1.gif" />
           </article>
         </>
@@ -46,7 +48,6 @@ export const store = {
               Our designers created a variety of interactive elements and animations, which I implemented using the Greensock library.
               Pictured on the right is a form that communicated with an api built in ASP.NET.
             </p>
-            
           </article>
           <article>
             <video autoPlay loop muted playsInline><source src="videos/hemevolution-video-1.mp4" type="video/mp4" /></video>
@@ -71,9 +72,6 @@ export const store = {
               This was a project that was full of challenging problems and tight deadlines, where I was often using 
               tools with which I did not have much experience.
             </p>
-            <video autoPlay loop muted playsInline><source src="videos/arcutis-video-1.mp4" type="video/mp4" /></video>
-          </article>
-          <article>
             <p>
               Part of this project which I was primarily responsible for was the front-end of a system for patients to register 
               for copay cards for the product.
@@ -82,6 +80,9 @@ export const store = {
               with the system. The website has since been out of the agency's hands, but the form that I built is still as 
               it was. You can see it on the "View the website" link&nbsp;above.
             </p>
+          </article>
+          <article>
+            <video autoPlay loop muted playsInline><source src="videos/arcutis-video-1.mp4" type="video/mp4" /></video>
             <img alt="arcutis-image-1" src="images/arcutis-image-1.png" />
           </article>
         </>
@@ -103,15 +104,16 @@ export const store = {
               time was essential, as was coordination with my developer colleagues and other teams due to the large volume of 
               content and detail needed for this brand.
             </p>
-            <video autoPlay loop muted playsInline><source src="videos/neurocrine-video-1.mp4" type="video/mp4" /></video>
-          </article>
-          <article>
             <p>
               One project for this client where I was able to utilize my knowledge in Node.js, was for an educational site to serve 
               patients, healthcare providers and others, to learn about Huntington's Disease. The title of the project is More Than HD.
               This was built from the ground up using vanilla JavaScript and Node.js. We built an anonymous, dynamic polling system to collect data 
               about users of the site using that Node.js backend.
             </p>
+          </article>
+          <article>
+            
+            <video autoPlay loop muted playsInline><source src="videos/neurocrine-video-1.mp4" type="video/mp4" /></video>
             <video autoPlay loop muted playsInline><source src="videos/neurocrine-video-2.mp4" type="video/mp4" /></video>
           </article>
         </>
@@ -128,6 +130,8 @@ export const store = {
               interest from potential clients. The project was built entirely custom in vanilla JavaScript and integrated into WordPress as a custom 
               theme, using a HubSpot API and database to store data where our client could access it.
             </p>
+          </article>
+          <article>
             <video autoPlay loop muted playsInline><source src="videos/cooper-video-1.mp4" type="video/mp4" /></video>
           </article>
         </>

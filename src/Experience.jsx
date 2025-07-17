@@ -25,11 +25,6 @@ export default function Experience() {
         target={[0, 0, 0]}
       /> */}
 
-
-
-
-
-
     </>
   );
 }
