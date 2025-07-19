@@ -1,7 +1,7 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 
 
-const Nav = ({ currentPage, setCurrentPage }) => {
+const Nav = ({ currentChosenTab, setCurrentChosenTab, currentPage }) => {
     const buttonRefs = useRef([]);
 
     buttonRefs.current = buttonRefs.current.slice(0, 6);
@@ -10,13 +10,12 @@ const Nav = ({ currentPage, setCurrentPage }) => {
 
 
     const handleTabClick = (index) => {
-        setCurrentPage(index);
+        setCurrentChosenTab(index);
     }
     
 
     return (
         <nav id="top-nav">
-            
             {tabs.map((tab, index) => (
                 <button
                     key={index}

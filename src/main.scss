@@ -131,8 +131,8 @@ h3 {
 
 p {
     font-weight: $normal;
-    font-size: clamp(0.75rem, 2vw, 0.95rem);
-    line-height: clamp(1rem, 2.2vw, 1.2rem);
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
+    line-height: clamp(1.15rem, 2.2vw, 1.4rem);
     color: white;
 }
 
@@ -181,7 +181,7 @@ button {
             box-sizing: border-box;
             position: relative;
             .card-content {
-                padding: 5px 0 0 5px;
+                padding: 8px 0 0 10px;
                 max-width: 1200px;
                 position: relative;
 
