@@ -140,6 +140,17 @@ a {
     font-size: 1rem;
     font-weight: $semi-bold;
     color: white;
+    background-color: $blue;
+    display: inline-block;
+    height: 40px;
+    width: 220px;
+    margin-right: 4px;
+    text-align: center;
+    line-height: 37px;
+}
+a:hover {
+    background-color: $white;
+    color: $blue;
 }
 
 
@@ -188,6 +199,11 @@ button {
                 h2 {
                     margin-bottom: 8.125rem;
                 }
+
+                .contact {
+                    margin-top: 137px;
+                    margin-bottom: 50px;
+                }
    
             
                 /* Link area */
@@ -199,19 +215,7 @@ button {
                     display: flex;
                     flex-direction: column;
                     gap: 1rem;
-                    a {
-                        background-color: $blue;
-                        display: inline-block;
-                        height: 40px;
-                        width: 220px;
-                        margin-right: 4px;
-                        text-align: center;
-                        line-height: 37px;
-                    }
-                    a:hover {
-                        background-color: $white;
-                        color: $blue;
-                    }
+    
                 }
             
                 /* Content row */
@@ -243,9 +247,6 @@ button {
                     p {
                         flex: 1;
                     }
-                }
-                article:nth-of-type(2) {
-                    margin-top: 10px;
                 }
             }
         }

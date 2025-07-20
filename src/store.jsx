@@ -28,6 +28,15 @@ export const store = {
             initiatives.
           </p>
         </article>
+        <article className="contact">
+          <h1>
+            Contact
+          </h1>
+        </article>
+        <article>
+          <a href="https://www.linkedin.com/in/thomas-ignarri-07ba8680/" target="_blank">LinkedIn</a>
+          <a href="mailto:tom.ignarri@gmail.com">Email</a>
+        </article>
       </>
     ),
   },
