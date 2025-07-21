@@ -11,10 +11,10 @@ export const store = {
         <article>
           <p>
             With over 5 years of professional experience, I specialize in
-            front-end development, crafting dynamic and visually engaging
+            front&#8209;end development, crafting dynamic and visually engaging
             digital experiences. As an Interactive Developer at AbelsonTaylor, I
             contributed to impactful web projects, leveraging NodeJS, React, and
-            Greensock to deliver high-quality solutions. I am passionate about
+            Greensock to deliver high&#8209;quality solutions. I am passionate about
             creating user-centered designs and innovative interactive content
             that aligns with organizational goals and fosters collaboration.
           </p>
