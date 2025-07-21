@@ -217,6 +217,10 @@ button {
                     gap: 1rem;
     
                 }
+
+                .single-column {
+                    max-width: 800px;
+                }
             
                 /* Content row */
                 article {
@@ -237,6 +241,7 @@ button {
                         -ms-user-drag: none;     /* For Internet Explorer */
                     }
                     img, video {
+                        margin-top: 10px;
                         flex: 1;
                         min-width: 0;
                         max-width: 100%;

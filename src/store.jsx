@@ -227,7 +227,7 @@ export const store = {
     techUsed: "Javascript, HTML, SCSS, Wordpress",
     content: (
       <>
-        <article>
+        <article className="single-column">
           <p>
             This is a project that I built independently during my time at
             AbelsonTaylor. Cooper Surgical needed a temporary page for a new
@@ -239,7 +239,7 @@ export const store = {
             where our client could access it.
           </p>
         </article>
-        <article>
+        <article className="single-column">
           <video autoPlay loop muted playsInline>
             <source src="videos/cooper-video-1.mp4" type="video/mp4" />
           </video>
