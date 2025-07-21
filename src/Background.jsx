@@ -1,51 +1,40 @@
-import React from 'react';
-import { useEffect } from 'react';
-import { useRapier, RigidBody, Physics, CuboidCollider } from '@react-three/rapier'
-import Objects from './Objects';
+import React, { useMemo } from "react";
+import * as THREE from "three";
+import { SimplexNoise } from "three/examples/jsm/math/SimplexNoise";
 
 const Background = () => {
+  const simplex = new SimplexNoise();
 
-    // Collider dimensions
-    const depth = 10;
-    const height = 20;
-    
-    const SetZGravity = () => {
-        const { world } = useRapier();
-      
-  
-        useEffect(() => {
-            world.gravity = { x: 0, y: 0, z: 9.81 }
-        }, [world])
-      
-        return null;
+  const geometry = useMemo(() => {
+    const simplex = new SimplexNoise();
+    const plane = new THREE.PlaneGeometry(800, 500, 600, 600);
+    const position = plane.attributes.position;
+
+    for (let i = 0; i < position.count; i++) {
+      const x = position.getX(i);
+      const y = position.getY(i);
+
+      const noise = simplex.noise(x * 0.03, y * 0.03);
+      position.setZ(i, noise * 3);
     }
 
-    return <Physics>
-            <SetZGravity />
+    position.needsUpdate = true;
+    plane.computeVertexNormals();
 
-            <Objects />
+    return plane;
+  }, []);
 
-            {/* floor */}
-            <RigidBody type="fixed">
-                <CuboidCollider args={[30, 0.5, depth]} position={[0, -height, 0]} />
-            </RigidBody>
-
-            {/* walls by width */}
-            <RigidBody type="fixed">
-                <CuboidCollider args={[30, height, 0.5]} position={[0, 0, depth / 2]} />
-            </RigidBody>
-            <RigidBody type="fixed">
-                <CuboidCollider args={[30, height, 0.5]} position={[0, 0, -depth / 2]} />
-            </RigidBody>
-
-            {/* walls by depth */}
-            <RigidBody type="fixed">
-                <CuboidCollider args={[0.5, height, depth]} position={[30, 0, 5]} />
-            </RigidBody>
-            <RigidBody type="fixed">
-                <CuboidCollider args={[0.5, height, depth]} position={[-30, 0, -5]} />
-            </RigidBody>
-        </Physics>
+  return (
+    <>
+      <mesh
+        geometry={geometry}
+        receiveShadow
+        castShadow
+      >
+        <meshStandardMaterial color="white" flatShading />
+      </mesh>
+    </>
+  );
 };
 
 export default Background;

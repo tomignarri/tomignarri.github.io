@@ -18,7 +18,7 @@ export default function Card({ title, techUsed, links, content }) {
         <section className="card">
           <section className="card-content">
             <h1>{title}</h1>
-            <h3>{techUsed}</h3>
+            <h2>{techUsed}</h2>
             <aside>{links}</aside>
             {content}
           </section>
