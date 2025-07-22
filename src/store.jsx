@@ -36,6 +36,8 @@ export const store = {
         <article>
           <a href="https://www.linkedin.com/in/thomas-ignarri-07ba8680/" target="_blank">LinkedIn</a>
           <a href="mailto:tom.ignarri@gmail.com">Email</a>
+          <a href="https://github.com/tomignarri" target="_blank">GitHub</a>
+          <a href="https://bitbucket.org/tomignarri/" target="_blank">Bitbucket</a>
         </article>
       </>
     ),
