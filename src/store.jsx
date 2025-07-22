@@ -112,10 +112,10 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/hemevolution-poster-1.jpg">
             <source src="videos/hemevolution-video-1.mp4" type="video/mp4" />
           </video>
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/hemevolution-poster-2.jpg">
             <source src="videos/hemevolution-video-2.mp4" type="video/mp4" />
           </video>
         </article>
@@ -166,7 +166,7 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/arcutis-poster-1.jpg">
             <source src="videos/arcutis-video-1.mp4" type="video/mp4" />
           </video>
           <img alt="arcutis-image-1" src="images/arcutis-image-1.png" />
@@ -211,10 +211,10 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/neurocrine-poster-1.jpg">
             <source src="videos/neurocrine-video-1.mp4" type="video/mp4" />
           </video>
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/neurocrine-poster-2.jpg">
             <source src="videos/neurocrine-video-2.mp4" type="video/mp4" />
           </video>
         </article>
@@ -240,7 +240,7 @@ export const store = {
           </p>
         </article>
         <article className="single-column">
-          <video autoPlay loop muted playsInline>
+          <video autoPlay loop muted playsInline poster="images/cooper-poster-1.jpg">
             <source src="videos/cooper-video-1.mp4" type="video/mp4" />
           </video>
         </article>
