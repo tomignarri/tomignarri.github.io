@@ -225,7 +225,7 @@ export const store = {
   },
 
   cooper: {
-    title: "COOPER",
+    title: "COOPER SURGICAL",
     techUsed: "Javascript, HTML, SCSS, Wordpress",
     content: (
       <>
