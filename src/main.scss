@@ -83,8 +83,8 @@ nav {
         margin: 0;
         border: none;
         color: $white;
-        width: clamp(7rem, 25vw, 15rem);
-        height: clamp(2.5rem, 5vw, 3rem);
+        width: clamp(7rem, 20vw, 12rem);
+        height: 2.5rem;
         text-align: left;
         padding-left: 10px;
     }
@@ -113,6 +113,10 @@ h1 {
     font-weight: 700;
     line-height: 6rem;
     color: white;
+    @media (max-width: $xl-screen) {
+        font-size: 5rem;
+        line-height: 4rem;
+    }
     @media (max-width: $small-tablet) {
         font-size: 3rem;
         line-height: 2.5rem;
@@ -136,9 +140,17 @@ h3 {
 
 p {
     font-weight: $normal;
-    font-size: clamp(0.8rem, 2vw, 1.1rem);
-    line-height: clamp(1.15rem, 2.2vw, 1.4rem);
+    font-size: 1rem;
+    line-height: 1.2rem;
     color: white;
+    @media (max-width: $large-desktop) {
+        font-size: 0.8rem;
+        line-height: 1.1rem;
+    }
+    @media (max-width: $small-tablet) {
+        font-size: 0.7rem;
+        line-height: 1rem;
+    }
 }
 
 a {
@@ -209,7 +221,7 @@ button {
             box-sizing: border-box;
             position: relative;
             .card-content {
-                padding: 0.6rem 0.8rem 0 0.8rem;
+                padding: 0.6rem 0.8rem 0.8rem 0.8rem;
                 max-width: 1200px;
                 position: relative;
 
@@ -221,8 +233,11 @@ button {
                 }
 
                 .contact {
-                    margin-top: clamp(4rem, 10vw, 8rem);
+                    margin-top: clamp(4rem, 8vw, 8rem);
                     margin-bottom: 50px;
+                    @media (max-width: $large-desktop) {
+                        margin-bottom: 30px;
+                    }
                 }
    
             
@@ -249,6 +264,9 @@ button {
 
                 .single-column {
                     max-width: 700px;
+                    @media (max-width: $large-desktop) {
+                        max-width: 500px;
+                    }
                 }
             
                 /* Content row */
