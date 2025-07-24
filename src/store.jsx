@@ -36,6 +36,8 @@ export const store = {
         <article>
           <a href="https://www.linkedin.com/in/thomas-ignarri-07ba8680/" target="_blank">LinkedIn</a>
           <a href="mailto:tom.ignarri@gmail.com">Email</a>
+          <a href="https://github.com/tomignarri" target="_blank">GitHub</a>
+          <a href="https://bitbucket.org/tomignarri/" target="_blank">Bitbucket</a>
         </article>
       </>
     ),
@@ -112,10 +114,26 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline poster="images/hemevolution-poster-1.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/hemevolution-poster-1.jpg"
+          >
             <source src="videos/hemevolution-video-1.mp4" type="video/mp4" />
           </video>
-          <video autoPlay loop muted playsInline poster="images/hemevolution-poster-2.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/hemevolution-poster-2.jpg"
+          >
             <source src="videos/hemevolution-video-2.mp4" type="video/mp4" />
           </video>
         </article>
@@ -166,7 +184,15 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline poster="images/arcutis-poster-1.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/arcutis-poster-1.jpg"
+          >
             <source src="videos/arcutis-video-1.mp4" type="video/mp4" />
           </video>
           <img alt="arcutis-image-1" src="images/arcutis-image-1.png" />
@@ -211,10 +237,26 @@ export const store = {
           </p>
         </article>
         <article>
-          <video autoPlay loop muted playsInline poster="images/neurocrine-poster-1.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/neurocrine-poster-1.jpg"
+          >
             <source src="videos/neurocrine-video-1.mp4" type="video/mp4" />
           </video>
-          <video autoPlay loop muted playsInline poster="images/neurocrine-poster-2.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/neurocrine-poster-2.jpg"
+          >
             <source src="videos/neurocrine-video-2.mp4" type="video/mp4" />
           </video>
         </article>
@@ -223,7 +265,7 @@ export const store = {
   },
 
   cooper: {
-    title: "COOPER",
+    title: "COOPER SURGICAL",
     techUsed: "Javascript, HTML, SCSS, Wordpress",
     content: (
       <>
@@ -240,7 +282,15 @@ export const store = {
           </p>
         </article>
         <article className="single-column">
-          <video autoPlay loop muted playsInline poster="images/cooper-poster-1.jpg">
+          <video 
+            preload="auto" 
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            disablePictureInPicture
+            poster="images/cooper-poster-1.jpg"
+          >
             <source src="videos/cooper-video-1.mp4" type="video/mp4" />
           </video>
         </article>
