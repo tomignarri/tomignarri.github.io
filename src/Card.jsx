@@ -5,6 +5,7 @@ export default function Card({ title, techUsed, links, content }) {
 
   const { ref, inView } = useInView({
     threshold: 0,
+    triggerOnce: true,
   });
 
   useEffect(() => {
@@ -30,7 +31,6 @@ export default function Card({ title, techUsed, links, content }) {
             ) : (
               <p>loading</p>
             )}
-            
           </section>
         </section>
       </div>

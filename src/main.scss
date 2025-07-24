@@ -227,9 +227,13 @@ button {
 
                 h2 {
                     margin-bottom: 8rem;
+                    @media (max-width: $xl-screen) {
+                        margin-bottom: 5rem;
+                    }
                     @media (max-width: $large-desktop) {
                         margin-bottom: 1rem;
                     }
+                    
                 }
 
                 .contact {
@@ -263,7 +267,7 @@ button {
                 }
 
                 .single-column {
-                    max-width: 700px;
+                    max-width: 600px;
                     @media (max-width: $large-desktop) {
                         max-width: 500px;
                     }
@@ -292,12 +296,15 @@ button {
                     }
                     img, video {
                         margin-top: 10px;
-                        flex: 1;
                         min-width: 0;
                         max-width: 100%;
+                        display: block;
                         height: auto;         
                         object-fit: cover; 
-                        display: block;
+                        flex: 1;
+                        @media (max-width: $small-tablet) {
+                            flex: none;
+                        }
                     }
                     p {
                         flex: 1;
