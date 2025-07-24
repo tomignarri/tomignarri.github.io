@@ -29,7 +29,7 @@ export default function Card({ title, techUsed, links, content }) {
             {inView ? (
               content
             ) : (
-              <p>loading</p>
+              <div className="loading-content">loading</div>
             )}
           </section>
         </section>

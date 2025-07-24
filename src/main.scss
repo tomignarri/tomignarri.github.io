@@ -169,6 +169,43 @@ a:hover {
     color: $blue;
 }
 
+video {
+    
+    /* Force remove all controls */
+    -webkit-appearance: none;
+    appearance: none;
+    
+    /* Remove all possible control elements */
+    &::-webkit-media-controls {
+      display: none !important;
+      -webkit-appearance: none !important;
+    }
+    
+    &::-webkit-media-controls-panel {
+      display: none !important;
+    }
+    
+    &::-webkit-media-controls-play-button {
+      display: none !important;
+    }
+    
+    &::-webkit-media-controls-start-playback-button {
+      display: none !important;
+    }
+    
+    &::-webkit-media-controls-enclosure {
+      display: none !important;
+    }
+    
+    &::-webkit-media-controls-current-time-display {
+      display: none !important;
+    }
+    
+    &::-webkit-media-controls-time-remaining-display {
+      display: none !important;
+    }
+  }
+
 
 
 button {
@@ -205,6 +242,10 @@ button {
 
     &::-webkit-scrollbar {
     display: none;
+    }
+
+    .loading-content {
+        min-height: 600px;
     }
 
     .card-container {
@@ -302,10 +343,12 @@ button {
                         height: auto;         
                         object-fit: cover; 
                         flex: 1;
+                    
                         @media (max-width: $small-tablet) {
                             flex: none;
                         }
                     }
+                    
                     p {
                         flex: 1;
                     }
