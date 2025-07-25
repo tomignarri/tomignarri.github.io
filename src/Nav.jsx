@@ -1,7 +1,7 @@
 import { useRef } from "react";
 
 
-const Nav = ({ currentChosenTab, setCurrentChosenTab, currentPage }) => {
+const Nav = ({ setCurrentChosenTab, currentPage }) => {
     const buttonRefs = useRef([]);
 
     buttonRefs.current = buttonRefs.current.slice(0, 6);

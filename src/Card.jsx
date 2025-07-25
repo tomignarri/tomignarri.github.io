@@ -12,6 +12,7 @@ export default function Card({ title, techUsed, links, content }) {
     const portfolioVideos = document.querySelectorAll(".card video");
 
     portfolioVideos.forEach((video) => {
+      video.muted = true;
       video.play().catch((error) => {
         console.log("Autoplay failed:", error);
       });

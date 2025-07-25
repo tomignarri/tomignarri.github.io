@@ -118,7 +118,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/hemevolution-poster-1.jpg"
@@ -129,7 +129,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/hemevolution-poster-2.jpg"
@@ -188,7 +188,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/arcutis-poster-1.jpg"
@@ -241,7 +241,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/neurocrine-poster-1.jpg"
@@ -252,7 +252,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/neurocrine-poster-2.jpg"
@@ -286,7 +286,7 @@ export const store = {
             preload="auto" 
             autoPlay 
             loop 
-            muted 
+            muted={true}
             playsInline 
             disablePictureInPicture
             poster="images/cooper-poster-1.jpg"
