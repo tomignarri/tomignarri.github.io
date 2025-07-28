@@ -177,10 +177,8 @@ export const store = {
             front-end of a system for patients to register for copay cards for
             the product. Successful communication with the IT team of our client
             and an external vendor was pivotal. We would frequently coordinate
-            together to diagnose and fix issues with the system. The website has
-            since been out of the agency's hands, but the form that I built is
-            still as it was. You can see it on the "View the website"
-            link&nbsp;above.
+            together to diagnose and fix issues with the system. You can see it 
+            on the "View the website" link&nbsp;above.
           </p>
         </article>
         <article>
