@@ -6,7 +6,7 @@ import { store } from "./store";
 
 const Ui = () => {
   const [currentPage, setCurrentPage] = useState(0);
-  const [currentChosenTab, setCurrentChosenTab] = useState(0);
+  const [currentChosenTab, setCurrentChosenTab] = useState(-1);
 
   const scrollAreaRef = useRef(null);
   const isAutoScrolling = useRef(false);
@@ -19,37 +19,20 @@ const Ui = () => {
     container: scrollAreaRef,
   });
 
-
-
   useEffect(() => {
     const scrollToCurrent = () => {
-        if (!scrollAreaRef.current) return;
-  
-        const targetCard = scrollAreaRef.current.children[currentChosenTab];
-        if (targetCard) {
-          targetCard.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-          });
-        }
+      if (!scrollAreaRef.current) return;
+      if (currentChosenTab === -1) return;
 
-    }
-    scrollToCurrent();
-     
-  }, [currentChosenTab])
+      const targetCard = scrollAreaRef.current.children[currentChosenTab];
 
-
-  const scrollToCurrent = (target) => {
-    if (!scrollAreaRef.current) return;
-    
-    const targetCard = scrollAreaRef.current.children[target];
-    if (targetCard) {
       targetCard.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start'
+        behavior: "smooth",
+        block: "start",
       });
-    }
-}
+    };
+    scrollToCurrent();
+  }, [currentChosenTab]);
 
   const getScrollPoints = () => {
     if (!scrollAreaRef.current) return [];
@@ -66,11 +49,11 @@ const Ui = () => {
 
 
   const handleScroll = () => {
-    //if (isAutoScrolling) return
     const scrollTop = scrollAreaRef.current.scrollTop;
     const scrollPoints = getScrollPoints();
 
     let activeSection = 0;
+    console.log("scrolling current chosen tab is: ", currentChosenTab)
 
     // set active section depending on scroll position
     scrollPoints.forEach((point, index) => {
@@ -78,14 +61,18 @@ const Ui = () => {
         activeSection = index;
       }
     });
-
+    
+    setCurrentChosenTab(-1)
     setCurrentPage(activeSection);
   };
 
-
   return (
     <>
-      <Nav currentPage={currentPage} currentChosenTab={currentChosenTab} setCurrentChosenTab={setCurrentChosenTab} />
+      <Nav
+        currentPage={currentPage}
+        currentChosenTab={currentChosenTab}
+        setCurrentChosenTab={setCurrentChosenTab}
+      />
 
       <motion.div
         id="scroll-indicator"

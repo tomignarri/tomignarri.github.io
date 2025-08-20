@@ -88,10 +88,13 @@ nav {
         text-align: left;
         padding-left: 10px;
     }
-    button:hover {
-        background-color: $white;
-        color: $blue;
-    }
+    @media (hover: hover) {
+        button:hover {
+            background-color: $white;
+            color: $blue;
+        }
+      }
+   
     .active {
         background-color: $white;
         color: $blue;
@@ -230,15 +233,12 @@ button {
     width: calc(100% - clamp(1rem, 10vw, 10rem));
     z-index: 1;
     overflow: scroll;
-    scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
     margin-top: clamp(6rem, 10vw, 10rem);
     padding-left: clamp(1rem, 10vw, 10rem);
     scrollbar-width: none;
     -ms-overflow-style: none;
-    @media (max-width: $small-tablet) {
-        scroll-snap-type: none;
-    }
+
 
     &::-webkit-scrollbar {
     display: none;
@@ -253,6 +253,7 @@ button {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
+        min-height: 700px;
         background-color: rgba(0, 0, 0, 0.3);
         @media (max-width: $small-tablet) {
             height: auto;
