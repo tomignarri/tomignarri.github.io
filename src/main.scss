@@ -253,6 +253,7 @@ button {
         box-sizing: border-box;
         height: 100%;
         width: 100%;
+        min-height: 700px;
         background-color: rgba(0, 0, 0, 0.3);
         @media (max-width: $small-tablet) {
             height: auto;

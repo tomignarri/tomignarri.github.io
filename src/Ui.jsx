@@ -4,9 +4,6 @@ import { motion, useScroll } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { store } from "./store";
 
-
-// the tab is sticking on mobile but not on desktop
-
 const Ui = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const [currentChosenTab, setCurrentChosenTab] = useState(-1);
@@ -50,9 +47,6 @@ const Ui = () => {
     }));
   };
 
-
-
-  // if I click on cooper and go up 1, I can't go back to cooper
 
   const handleScroll = () => {
     const scrollTop = scrollAreaRef.current.scrollTop;
