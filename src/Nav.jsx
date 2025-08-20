@@ -8,8 +8,8 @@ const Nav = ({ setCurrentChosenTab, currentPage }) => {
 
     const tabs = ["About Me", "CSL Behring", "Neurocrine", "Arcutis", "Cooper", "Iperbot"];
 
-
     const handleTabClick = (index) => {
+        console.log("set current tab at ", index)
         setCurrentChosenTab(index);
     }
     
